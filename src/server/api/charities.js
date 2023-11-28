@@ -103,3 +103,19 @@ router.put("/:id", async (req, res, next) =>{
   }
 });
 
+
+//Deletes a charity
+
+router.delete("/:id", async(req, res, next) => {
+  try {
+    const id = +req.params.id;
+
+    const charityById = await prisma.post.findUnique({ where: { id }});
+    // validateTask(res.locals.user, task); THIS IS FOR AUTH STUFF
+
+    await prisma.post.delete({ where: { id }});
+    res.sendStatus(204);
+  } catch (err) {
+    next(err)
+  }
+});
