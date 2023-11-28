@@ -1,3 +1,3 @@
 module.exports = {
-  ServerError: require('./ServerError')
+  ServerError: require('./ServerErrors')
 };
