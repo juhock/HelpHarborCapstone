@@ -36,3 +36,52 @@ router.get('/:id', async (req, res, next) => {
     next();
   }
 });
+
+//this code should allow the adding of a charity!
+router.post('/', async (req, res, next) => {
+
+ 
+  
+  try{
+ //here we grab the properties from the Post schema model
+    const { title, email, image, phone, address, userId} = req.body;
+// now for each property we give an error handler...
+    if(!title) {
+      throw new ServerError(400, "Title is required")
+    }  
+    if(!email) {
+      throw new ServerError(400, "Email is required")
+    }   
+    if(!image) {
+      throw new ServerError(400, "Image is required")
+    } 
+    if(!phone) {
+      throw new ServerError(400, "Phone Number is required")
+    }
+    if(!address) {
+      throw new ServerError(400, "Address is required")
+    }   
+    
+    const charity = await prisma.post.create({
+        data: {
+          title,
+          email,
+          image,
+          phone,
+          address,
+          userId,
+          //CODE FOR AUTH STUFF NEEDS TO BE HERE LATER ON!
+          
+        },
+    });
+    res.json(charity)
+  } catch(err){
+    next(err);
+  }
+
+  console.log("Yingshi needs to chill:", res.locals.user)
+});
+
+
+
+
