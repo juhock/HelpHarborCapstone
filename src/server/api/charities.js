@@ -83,5 +83,23 @@ router.post('/', async (req, res, next) => {
 });
 
 
+//update a charity
 
+router.put("/:id", async (req, res, next) =>{
+  try {
+    const id = +req.params.id;
+    const {title, email, image, phone, address, userId} = req.body;
+
+    const charity = await prisma.post.findUnique({ where: { id }});
+    // validateTask(res.locals.user, task); THIS IS FOR AUTH STUFF
+
+    const updatedCharity = await prisma.post.update({
+      where: { id },
+      data: { title, email, image, phone, address, userId },
+    });
+    res.json(updatedCharity);
+  } catch (err) {
+    next(err);
+  }
+});
 
