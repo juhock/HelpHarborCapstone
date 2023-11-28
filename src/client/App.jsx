@@ -1,9 +1,10 @@
 import { Outlet } from 'react-router-dom';
-// import Navigation from './components/Navigations';
+// import navBar from './components/NavBar';
 
 function App() {
   return (
     <>
+      {/* <navBar /> */}
       <Outlet />
     </>
   );
