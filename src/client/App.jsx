@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom';
-// import navBar from './components/navBar';
+import Navbar from '../components/features/navBar';
 
 function App() {
   return (
     <>
-      {/* <navBar /> */}
+      <Navbar /> 
       <Outlet />
       <p>Just render this!</p>
     </>
