@@ -11,7 +11,9 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home />
+        // this element needs to be updated with the path
+        // when component is ready
+        element: <App />
       }
     ]
   }
