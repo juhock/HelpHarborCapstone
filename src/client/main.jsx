@@ -12,8 +12,6 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        // this element needs to be updated with the path
-        // when component is ready
         element: <HomePage />
       }
     ]

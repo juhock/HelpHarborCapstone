@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import hanger from '../../../public/hanger.png';
 
 export default function HomePage() {
   return (
@@ -18,6 +20,9 @@ export default function HomePage() {
         toward a better, more caring world. Join us at Help Harbor, where every
         click, share, and contribution creates ripples of positive change.
       </p>
+      <Link to={'/clothes'}>
+        <img src={hanger} height={250} width={250} alt='Clothes' />
+      </Link>
     </>
   );
 }
