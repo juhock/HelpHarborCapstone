@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import HomePage from '../components/features/Homepage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
         path: '/',
         // this element needs to be updated with the path
         // when component is ready
-        element: <App />
+        element: <HomePage />
       }
     ]
   }
