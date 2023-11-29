@@ -5,7 +5,7 @@ import './index.css';
 import CharityList from '../components/features/CharityList.jsx';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import HomePage from '../components/features/Homepage.jsx';
+import HomePage from '../components/Homepage.jsx';
 import { Provider } from 'react-redux';
 import store from './store/index.js';
 

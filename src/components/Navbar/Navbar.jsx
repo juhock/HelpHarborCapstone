@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import { Link } from 'react-router-dom';
 
-import './navBar.css'
+import './Navbar.css'
 import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {

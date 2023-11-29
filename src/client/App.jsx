@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import Navbar from '../components/features/navBar';
+import Navbar from '../components/Navbar/Navbar';
 import "./app.css";
 
 
@@ -8,7 +8,6 @@ function App() {
     <>
       <Navbar /> 
       <Outlet />
-      
       
       <p>Just render this!</p>
     </>
