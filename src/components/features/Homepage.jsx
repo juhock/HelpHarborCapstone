@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import hanger from '../../../public/hanger.png';
+import hanger from '../../../src/hanger.png';
+import burgericon from '../../../src/burgericon.png';
+import couch from '../../../src/couch.png';
 
 export default function HomePage() {
   return (
@@ -22,6 +24,14 @@ export default function HomePage() {
       </p>
       <Link to={'/clothes'}>
         <img src={hanger} height={250} width={250} alt='Clothes' />
+      </Link>
+      <br />
+      <Link to={'/food'}>
+        <img src={burgericon} height={250} width={250} alt='Food' />
+      </Link>
+      <br />
+      <Link to={'/furniture'}>
+        <img src={couch} height={250} width={250} alt='Furniture' />
       </Link>
     </>
   );
