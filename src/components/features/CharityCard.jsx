@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
-import "../../server/prisma/seed";
 // import charity slice
 
-export default function CharityCard({ charity }) {
+export default function CharityCard({charity}) {
     // const miniBio = charity.description.slice(0, 175) + "...";
     return (
         <li className="charity-card">
