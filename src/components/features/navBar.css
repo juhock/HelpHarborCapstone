@@ -72,6 +72,10 @@ nav .menu span{
         margin-bottom:0.25rem;
     }
 
+    nav ul.open{
+        display: flex;
+    }
+
     nav ul li{
         width: 100%;
         text-align:center;

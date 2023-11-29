@@ -6,17 +6,22 @@ import './navBar.css'
 import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
+   const [menuOpen, setMenuOpen] = useState(false)
   return (
     <nav>
       <Link to="/" className='title'>
         HelpHarbor</Link>
-        <div className= "menu">
+        <div className= "menu"
+         onClick={() => {
+          setMenuOpen(!menuOpen);
+        }}
+        >
           <span></span>
           <span></span>
           <span></span>
         </div>
 
-      <ul>
+      <ul className={menuOpen ? "open" : ""}>
         <li>
           <NavLink to='/'>Home</NavLink>
         </li>
