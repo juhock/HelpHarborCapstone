@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -10,6 +10,11 @@ export default function Navbar() {
     <nav>
       <Link to="/" className='title'>
         HelpHarbor</Link>
+        <div className= "menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
       <ul>
         <li>
