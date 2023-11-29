@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import hanger from '../../../src/hanger.png';
 import burgericon from '../../../src/burgericon.png';
 import couch from '../../../src/couch.png';
+import infinity from '../../../src/infinity.png';
 
 export default function HomePage() {
   return (
@@ -32,6 +33,10 @@ export default function HomePage() {
       <br />
       <Link to={'/furniture'}>
         <img src={couch} height={250} width={250} alt='Furniture' />
+      </Link>
+      <br />
+      <Link to={'/charities'}>
+        <img src={infinity} height={250} width={250} alt='All Charities' />
       </Link>
     </>
   );
