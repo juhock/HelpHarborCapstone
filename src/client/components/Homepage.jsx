@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import hanger from '../../../src/hanger.png';
-import burgericon from '../../../src/burgericon.png';
-import couch from '../../../src/couch.png';
-import infinity from '../../../src/infinity.png';
+import hanger from '../assets/hanger.png';
+import burgericon from '../assets/burgericon.png';
+import couch from '../assets/couch.png';
+import infinity from '../assets/infinity.png';
 
 export default function HomePage() {
   return (
