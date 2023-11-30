@@ -1,0 +1,42 @@
+footernav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f172a;
+    position: sticky;
+    bottom: 0px;
+    left: 26%;
+    padding: 0 30px;
+    box-shadow: 0 5px rgb(0, 0, 0, 0.25);
+    width: 50%;
+    height: 30px;
+    border-radius: 13px;
+     
+  }
+
+  footernav ul {
+    display: flex;
+  }
+  
+  footernav ul li {
+    list-style: none;
+  }
+
+
+footernav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  footernav ul li a:not(.active):hover {
+    background-color: #172554;
+  }
+
+  @media (max-width: 500px){
+    footernav{display: none;
+  }
+}

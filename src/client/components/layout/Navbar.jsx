@@ -31,6 +31,9 @@ export default function Navbar() {
         <li>
           <NavLink to='/users/me'>Account</NavLink>
         </li>
+        <li>
+          <NavLink to='/signup'>Signup</NavLink>
+        </li>
       </ul>
     </nav>
   );
