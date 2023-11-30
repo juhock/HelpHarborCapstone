@@ -17,8 +17,11 @@ const seed = async () => {
             phone: '132-526-7390',
             address: '123 Rainbow Rd',
             description: 'We need clothes!',
+
+            //NEED TO CREATE CONNECTION TO RENDER ON BACKEND AND FILTER THROUGH ON THE FRONT END. STRETCH GOAL!
+
             categories: {
-              create: [{ name: 'Food' }]
+              create: [{ name: 'Clothes' }]
             }
           },
           {
@@ -42,7 +45,7 @@ const seed = async () => {
             address: '101 Sea World Rd',
             description: 'We need furniture!',
             categories: {
-              create: [{ name: 'Food' }]
+              create: [{ name: 'Furniture' }]
             }
           },
           {
@@ -54,7 +57,7 @@ const seed = async () => {
             address: '404 Electric Avenue',
             description: 'We need clothes!',
             categories: {
-              create: [{ name: 'Food' }]
+              create: [{ name: 'Clothes' }]
             }
           },
           {
@@ -66,7 +69,7 @@ const seed = async () => {
             address: '90 Backstreet Back Blv',
             description: 'We need clothes!',
             categories: {
-              create: [{ name: 'Food' }]
+              create: [{ name: 'Clothes' }]
             }
           },
           {
@@ -90,7 +93,7 @@ const seed = async () => {
             address: '1000 Houston Avenue',
             description: 'We need furniture!',
             categories: {
-              create: [{ name: 'Food' }]
+              create: [{ name: 'Furniture' }]
             }
           },
           {
@@ -102,7 +105,7 @@ const seed = async () => {
             address: '737 Applesauce Lane',
             description: 'We need furniture!',
             categories: {
-              create: [{ name: 'Food' }]
+              create: [{ name: 'Furniture' }]
             }
           },
           {
@@ -126,7 +129,7 @@ const seed = async () => {
             address: '333 Sea Street',
             description: 'We need clothes!',
             categories: {
-              create: [{ name: 'Food' }]
+              create: [{ name: 'Clothes' }]
             }
           }
         ]

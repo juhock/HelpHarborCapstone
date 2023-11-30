@@ -60,6 +60,9 @@ router.post('/', async (req, res, next) => {
     if (!description) {
       throw new ServerError(400, 'Description is required');
     }
+    if (!categories) {
+      throw new ServerError(400, 'Categories is required');
+    }
 
     const charity = await prisma.post.create({
       data: {
@@ -69,6 +72,7 @@ router.post('/', async (req, res, next) => {
         phone,
         address,
         description,
+        categories,
         userId
         //CODE FOR AUTH STUFF NEEDS TO BE HERE LATER ON!
       }
@@ -86,15 +90,32 @@ router.post('/', async (req, res, next) => {
 router.put('/:id', async (req, res, next) => {
   try {
     const id = +req.params.id;
-    const { title, email, image, phone, address, description, userId } =
-      req.body;
+    const {
+      title,
+      email,
+      image,
+      phone,
+      address,
+      description,
+      categories,
+      userId
+    } = req.body;
 
     const charity = await prisma.post.findUnique({ where: { id } });
     // validateTask(res.locals.user, task); THIS IS FOR AUTH STUFF
 
     const updatedCharity = await prisma.post.update({
       where: { id },
-      data: { title, email, image, phone, address, userId }
+      data: {
+        title,
+        email,
+        image,
+        phone,
+        address,
+        description,
+        categories,
+        userId
+      }
     });
     res.json(updatedCharity);
   } catch (err) {
