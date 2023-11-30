@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
+import App from '../client/components/layout/App.jsx';
 import './index.css';
-import CharityList from '../components/charities/CharityList.jsx';
+import CharityList from '../client/components/charities/CharityList.jsx';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import HomePage from '../components/Homepage.jsx';
+import HomePage from '../client/components/Homepage.jsx';
 import { Provider } from 'react-redux';
 import store from './store/index.js';
 
