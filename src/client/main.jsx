@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from '../client/components/Homepage.jsx';
 import { Provider } from 'react-redux';
 import store from './store/index.js';
+import CharityDetails from './components/charities/CharityDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,11 @@ const router = createBrowserRouter([
       {
         path: '/charities',
         element: <CharityList/>
-      }
+      },
+      {
+        path: '/charities/:id',
+        element: <CharityDetails/>
+      },
     ]
   }
 ]);
