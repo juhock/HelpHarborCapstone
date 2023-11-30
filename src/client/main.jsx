@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
-import CharityList from '../components/features/CharityList.jsx';
+import CharityList from '../components/charities/CharityList.jsx';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from '../components/Homepage.jsx';

@@ -1,6 +1,6 @@
 // import { useState } from 'react';
 import CharityCard from './CharityCard';
-import { useGetCharitiesQuery } from '../../client/charitiesSlice';
+import { useGetCharitiesQuery } from '../charities/charitiesSlice';
 
 export default function CharityList() {
 

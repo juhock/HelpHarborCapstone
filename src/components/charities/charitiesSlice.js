@@ -1,4 +1,4 @@
-import api from "./store/api";
+import api from "../../client/store/api";
 
 //Here lies the endpoints for the charities
 const charityApi = api.injectEndpoints({
