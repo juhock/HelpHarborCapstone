@@ -18,12 +18,20 @@ model User {
 }
 
 model Post {
-  id      Int    @id @default(autoincrement())
-  title   String
-  email   String
-  image   String
-  phone   String
-  address String
-  userId  Int
-  User    User   @relation(fields: [userId], references: [id])
+  id          Int        @id @default(autoincrement())
+  title       String
+  email       String
+  image       String
+  phone       String
+  address     String
+  description String
+  categories  Category[]
+  userId      Int
+  User        User       @relation(fields: [userId], references: [id])
+}
+
+model Category {
+  id   Int    @id @default(autoincrement())
+  name String
+  Post Post[]
 }

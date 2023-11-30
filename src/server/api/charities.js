@@ -16,7 +16,6 @@ router.get('/', async (req, res, next) => {
   }
 });
 
-
 //displays charity by id!
 
 router.get('/:id', async (req, res, next) => {
@@ -25,13 +24,13 @@ router.get('/:id', async (req, res, next) => {
     const id = +req.params.id;
 
     const charityById = await prisma.post.findUnique({ where: { id } });
-    if(!charityById) {
+    if (!charityById) {
       return next({
-        status: 404, 
+        status: 404,
         message: `Look buddy, theres nothing here, its ok, you can move along. :)`
       });
     }
-    res.json(charityById)
+    res.json(charityById);
   } catch {
     next();
   }
@@ -39,63 +38,84 @@ router.get('/:id', async (req, res, next) => {
 
 //this code should allow the adding of a charity!
 router.post('/', async (req, res, next) => {
-
- 
-  
-  try{
- //here we grab the properties from the Post schema model
-    const { title, email, image, phone, address, userId} = req.body;
-// now for each property we give an error handler...
-    if(!title) {
-      throw new ServerError(400, "Title is required")
-    }  
-    if(!email) {
-      throw new ServerError(400, "Email is required")
-    }   
-    if(!image) {
-      throw new ServerError(400, "Image is required")
-    } 
-    if(!phone) {
-      throw new ServerError(400, "Phone Number is required")
+  try {
+    //here we grab the properties from the Post schema model
+    const { title, email, image, phone, address, userId } = req.body;
+    // now for each property we give an error handler...
+    if (!title) {
+      throw new ServerError(400, 'Title is required');
     }
-    if(!address) {
-      throw new ServerError(400, "Address is required")
-    }   
-    
+    if (!email) {
+      throw new ServerError(400, 'Email is required');
+    }
+    if (!image) {
+      throw new ServerError(400, 'Image is required');
+    }
+    if (!phone) {
+      throw new ServerError(400, 'Phone Number is required');
+    }
+    if (!address) {
+      throw new ServerError(400, 'Address is required');
+    }
+    if (!description) {
+      throw new ServerError(400, 'Description is required');
+    }
+    if (!categories) {
+      throw new ServerError(400, 'Categories is required');
+    }
+
     const charity = await prisma.post.create({
-        data: {
-          title,
-          email,
-          image,
-          phone,
-          address,
-          userId,
-          //CODE FOR AUTH STUFF NEEDS TO BE HERE LATER ON!
-          
-        },
+      data: {
+        title,
+        email,
+        image,
+        phone,
+        address,
+        description,
+        categories,
+        userId
+        //CODE FOR AUTH STUFF NEEDS TO BE HERE LATER ON!
+      }
     });
-    res.json(charity)
-  } catch(err){
+    res.json(charity);
+  } catch (err) {
     next(err);
   }
 
-  console.log("Yingshi needs to chill:", res.locals.user)
+  console.log('Yingshi needs to chill:', res.locals.user);
 });
-
 
 //update a charity
 
-router.put("/:id", async (req, res, next) =>{
+router.put('/:id', async (req, res, next) => {
   try {
     const id = +req.params.id;
-    const {title, email, image, phone, address, userId} = req.body;
+    const {
+      title,
+      email,
+      image,
+      phone,
+      address,
+      description,
+      categories,
+      userId
+    } = req.body;
 
-    const charity = await prisma.post.findUnique({ where: { id }});
+    const charity = await prisma.post.findUnique({ where: { id } });
     // validateTask(res.locals.user, task); THIS IS FOR AUTH STUFF
 
     const updatedCharity = await prisma.post.update({
       where: { id },
-      data: { title, email, image, phone, address, userId },
+      data: {
+        title,
+        email,
+        image,
+        phone,
+        address,
+        description,
+        categories,
+        userId
+      }
     });
     res.json(updatedCharity);
   } catch (err) {
@@ -103,19 +123,18 @@ router.put("/:id", async (req, res, next) =>{
   }
 });
 
-
 //Deletes a charity
 
-router.delete("/:id", async(req, res, next) => {
+router.delete('/:id', async (req, res, next) => {
   try {
     const id = +req.params.id;
 
-    const charityById = await prisma.post.findUnique({ where: { id }});
+    const charityById = await prisma.post.findUnique({ where: { id } });
     // validateTask(res.locals.user, task); THIS IS FOR AUTH STUFF
 
-    await prisma.post.delete({ where: { id }});
+    await prisma.post.delete({ where: { id } });
     res.sendStatus(204);
   } catch (err) {
-    next(err)
+    next(err);
   }
 });
