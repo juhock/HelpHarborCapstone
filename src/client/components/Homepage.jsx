@@ -23,7 +23,7 @@ export default function HomePage() {
         toward a better, more caring world. Join us at Help Harbor, where every
         click, share, and contribution creates ripples of positive change.
       </p>
-      <Link to={'/clothes'}>
+      {/* <Link to={'/clothes'}>
         <img src={hanger} height={250} width={250} alt='Clothes' />
       </Link>
       <br />
@@ -37,7 +37,7 @@ export default function HomePage() {
       <br />
       <Link to={'/charities'}>
         <img src={infinity} height={250} width={250} alt='All Charities' />
-      </Link>
+      </Link> */}
     </>
   );
 }

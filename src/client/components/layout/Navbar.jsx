@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 
 import './Navbar.css'
 import { NavLink } from 'react-router-dom';
+import logo from '../../assets/logo2.png';
 
 export default function Navbar() {
    const [menuOpen, setMenuOpen] = useState(false)
   return (
     <nav>
       <Link to="/" className='title'>
-        HelpHarbor</Link>
+         <img src={logo} className="logo" alt="light house icon" /> </Link>
         <div className= "menu"
          onClick={() => {
           setMenuOpen(!menuOpen);
