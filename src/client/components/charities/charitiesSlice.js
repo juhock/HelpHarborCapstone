@@ -42,7 +42,7 @@ const charityApi = api.injectEndpoints({
     updateCharity: builder.mutation({
       query: (updatedCharity) => ({
         url: `/charities/${updatedCharity.id}`,
-        method: "PUT",
+        method: "PATCH",
         body: updatedCharity,
       }),
       invalidatesTags: ["Charity"],

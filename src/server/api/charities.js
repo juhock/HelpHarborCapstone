@@ -87,7 +87,7 @@ router.post('/', async (req, res, next) => {
 
 //update a charity
 
-router.put('/:id', async (req, res, next) => {
+router.patch('/:id', async (req, res, next) => {
   try {
     const id = +req.params.id;
     const {
