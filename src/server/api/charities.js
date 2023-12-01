@@ -60,9 +60,9 @@ router.post('/', async (req, res, next) => {
     if (!description) {
       throw new ServerError(400, 'Description is required');
     }
-    if (!categories) {
-      throw new ServerError(400, 'Categories is required');
-    }
+    // if (!categories) {
+    //   throw new ServerError(400, 'Categories is required');
+    // }
 
     const charity = await prisma.post.create({
       data: {
@@ -72,7 +72,7 @@ router.post('/', async (req, res, next) => {
         phone,
         address,
         description,
-        categories,
+        // categories,
         userId
         //CODE FOR AUTH STUFF NEEDS TO BE HERE LATER ON!
       }
@@ -87,7 +87,7 @@ router.post('/', async (req, res, next) => {
 
 //update a charity
 
-router.patch('/:id', async (req, res, next) => {
+router.put('/:id', async (req, res, next) => {
   try {
     const id = +req.params.id;
     const {
@@ -97,7 +97,7 @@ router.patch('/:id', async (req, res, next) => {
       phone,
       address,
       description,
-      categories,
+      // categories,
       userId
     } = req.body;
 
@@ -113,7 +113,7 @@ router.patch('/:id', async (req, res, next) => {
         phone,
         address,
         description,
-        categories,
+        // categories,
         userId
       }
     });

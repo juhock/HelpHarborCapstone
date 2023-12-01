@@ -16,13 +16,13 @@ const seed = async () => {
               'https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar-thumbnail.png',
             phone: '132-526-7390',
             address: '123 Rainbow Rd',
-            description: 'We need clothes!',
+            description: 'We need clothes!'
 
             //NEED TO CREATE CONNECTION TO RENDER ON BACKEND AND FILTER THROUGH ON THE FRONT END. STRETCH GOAL!
 
-            categories: {
-              create: [{ name: 'Clothes' }]
-            }
+            // categories: {
+            //   create: [{ name: 'Clothes' }]
+            // }
           },
           {
             title: 'Food Pantry',
@@ -31,10 +31,10 @@ const seed = async () => {
               'https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar-thumbnail.png',
             phone: '133-656-7390',
             address: '88 Yellow Brick Rd',
-            description: 'We need food!',
-            categories: {
-              create: [{ name: 'Food' }]
-            }
+            description: 'We need food!'
+            // categories: {
+            //   create: [{ name: 'Food' }]
+            // }
           },
           {
             title: 'Redemption Arc',
@@ -43,10 +43,10 @@ const seed = async () => {
               'https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar-thumbnail.png',
             phone: '663-466-6690',
             address: '101 Sea World Rd',
-            description: 'We need furniture!',
-            categories: {
-              create: [{ name: 'Furniture' }]
-            }
+            description: 'We need furniture!'
+            // categories: {
+            //   create: [{ name: 'Furniture' }]
+            // }
           },
           {
             title: 'Emergency Groceries',
@@ -55,10 +55,10 @@ const seed = async () => {
               'https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar-thumbnail.png',
             phone: '233-326-7790',
             address: '404 Electric Avenue',
-            description: 'We need clothes!',
-            categories: {
-              create: [{ name: 'Clothes' }]
-            }
+            description: 'We need clothes!'
+            // categories: {
+            //   create: [{ name: 'Clothes' }]
+            // }
           },
           {
             title: 'Santa Clarita Hospital',
@@ -79,10 +79,10 @@ const seed = async () => {
               'https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar-thumbnail.png',
             phone: '111-422-7640',
             address: '82 Cherry Brick Road',
-            description: 'We need food!',
-            categories: {
-              create: [{ name: 'Food' }]
-            }
+            description: 'We need food!'
+            // categories: {
+            //   create: [{ name: 'Food' }]
+            // }
           },
           {
             title: 'Charity Comet',
@@ -91,10 +91,10 @@ const seed = async () => {
               'https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar-thumbnail.png',
             phone: '993-496-9990',
             address: '1000 Houston Avenue',
-            description: 'We need furniture!',
-            categories: {
-              create: [{ name: 'Furniture' }]
-            }
+            description: 'We need furniture!'
+            // categories: {
+            //   create: [{ name: 'Furniture' }]
+            // }
           },
           {
             title: 'Giving Tree',
@@ -103,10 +103,10 @@ const seed = async () => {
               'https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar-thumbnail.png',
             phone: '888-488-9890',
             address: '737 Applesauce Lane',
-            description: 'We need furniture!',
-            categories: {
-              create: [{ name: 'Furniture' }]
-            }
+            description: 'We need furniture!'
+            // categories: {
+            //   create: [{ name: 'Furniture' }]
+            // }
           },
           {
             title: 'Hugs 4 Bugs',
@@ -115,10 +115,10 @@ const seed = async () => {
               'https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar-thumbnail.png',
             phone: '773-455-5890',
             address: '3 Anthill Road',
-            description: 'We need food!',
-            categories: {
-              create: [{ name: 'Food' }]
-            }
+            description: 'We need food!'
+            // categories: {
+            //   create: [{ name: 'Food' }]
+            // }
           },
           {
             title: 'Compass of Courage',
@@ -127,10 +127,10 @@ const seed = async () => {
               'https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar-thumbnail.png',
             phone: '453-346-7000',
             address: '333 Sea Street',
-            description: 'We need clothes!',
-            categories: {
-              create: [{ name: 'Clothes' }]
-            }
+            description: 'We need clothes!'
+            // categories: {
+            //   create: [{ name: 'Clothes' }]
+            // }
           }
         ]
       }

@@ -1,4 +1,4 @@
-import api from "../../store/api";
+import api from '../../store/api';
 
 //Here lies the endpoints for the charities
 const charityApi = api.injectEndpoints({
@@ -7,47 +7,47 @@ const charityApi = api.injectEndpoints({
     getCharities: builder.query({
       //we are grabbing the charities api with the route /api/charities
       //so for all the queries, they will start with /charities
-      query: () => "/charities",
+      query: () => '/charities',
 
-      providesTags: ["Charities"],
+      providesTags: ['Charities']
     }),
 
     //This is useGetCharityQuery
     getCharity: builder.query({
       query: (id) => `/charities/${id}`,
 
-      providesTags: ["Charity"],
+      providesTags: ['Charity']
     }),
 
     //This is useCreateCharityMutation
     createCharity: builder.mutation({
       query: (charity) => ({
-        url: "/charities",
-        method: "POST",
-        body: charity,
+        url: '/charities',
+        method: 'POST',
+        body: charity
       }),
-      invalidatesTags: ["Charities"],
+      invalidatesTags: ['Charities']
     }),
 
     //This is useDeleteCharityMutation
     deleteCharity: builder.mutation({
       query: (id) => ({
         url: `/charities/${id}`,
-        method: "DELETE",
+        method: 'DELETE'
       }),
-      invalidatesTags: ["Charities"],
+      invalidatesTags: ['Charities']
     }),
 
     //This is useUpdateCharityMutation
     updateCharity: builder.mutation({
       query: (updatedCharity) => ({
         url: `/charities/${updatedCharity.id}`,
-        method: "PATCH",
-        body: updatedCharity,
+        method: 'PUT',
+        body: updatedCharity
       }),
-      invalidatesTags: ["Charity"],
-    }),
-  }),
+      invalidatesTags: ['Charity']
+    })
+  })
 });
 
 export const {
@@ -55,5 +55,5 @@ export const {
   useGetCharityQuery,
   useCreateCharityMutation,
   useDeleteCharityMutation,
-  useUpdateCharityMutation,
+  useUpdateCharityMutation
 } = charityApi;
