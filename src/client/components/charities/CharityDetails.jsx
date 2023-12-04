@@ -120,11 +120,11 @@ export default function CharityDetails() {
           <select
             name='category'
             value={category}
-            onChange={(event) => handleCategoryChange(event.target.value)}
+            onChange={(e) => handleCategoryChange(e)}
           >
-            <option id='0'>Food</option>
-            <option id='1'>Clothes</option>
-            <option id='2'>Furniture</option>
+            <option>Food</option>
+            <option>Clothes</option>
+            <option>Furniture</option>
           </select>
           <input
             type='text'

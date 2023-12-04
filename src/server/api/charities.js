@@ -21,7 +21,6 @@ router.get('/', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => {
   try {
     //grabs the id from the charity database
-    console.log('Charity Id:', id);
     const id = +req.params.id;
 
     const charityById = await prisma.post.findUnique({ where: { id } });
