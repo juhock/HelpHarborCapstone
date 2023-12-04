@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { React, useState } from 'react';
 
-export default function LoginForm() {
+export default function Register() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');  
 
@@ -11,7 +11,7 @@ export default function LoginForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h3>Login Form</h3>
+      <h3>Register Form</h3>
       <label>
         Username:
         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
@@ -23,7 +23,7 @@ export default function LoginForm() {
       </label>
       <br />
            <button type="submit">Login</button>
-      <p>No Account? <Link to="/register">Register here</Link></p>
+      <p>Already Registered? <Link to="/login">Login here!</Link></p>
       <br />
 
     </form>
