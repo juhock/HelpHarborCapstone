@@ -4,10 +4,14 @@ import hanger from '../assets/hanger.png';
 import burgericon from '../assets/burgericon.png';
 import couch from '../assets/couch.png';
 import infinity from '../assets/infinity.png';
+import './Homepage.css'
 
 export default function HomePage() {
   return (
     <>
+      <div class="background">
+        <section>
+        <div class="welcomeMsg">
       <h1>Welcome to Help Harbor</h1>
       <p>
         Welcome to Help Harbor, a beacon of compassion and collaboration in the
@@ -23,6 +27,9 @@ export default function HomePage() {
         toward a better, more caring world. Join us at Help Harbor, where every
         click, share, and contribution creates ripples of positive change.
       </p>
+        </div>
+        </section>
+      </div>
       {/* <Link to={'/clothes'}>
         <img src={hanger} height={250} width={250} alt='Clothes' />
       </Link>

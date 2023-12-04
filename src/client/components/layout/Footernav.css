@@ -2,7 +2,7 @@ footernav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0f172a;
+    background-color: #222;
     position: sticky;
     bottom: 0px;
     left: 26%;
@@ -33,7 +33,7 @@ footernav ul li a {
   }
   
   footernav ul li a:not(.active):hover {
-    background-color: #172554;
+    background-color: #bbc7eb;
   }
 
   @media (max-width: 500px){
