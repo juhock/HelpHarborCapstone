@@ -13,7 +13,6 @@ export default function CharityDetails() {
   //these two variables will grab a single charity from the api!!!
   const { id } = useParams();
   const { data: charity, isLoading } = useGetCharityQuery(id);
-
   const [deleteCharity] = useDeleteCharityMutation();
   const [updateCharity] = useUpdateCharityMutation();
 
@@ -29,14 +28,16 @@ export default function CharityDetails() {
   const [userId, setUserId] = useState(1);
 
   useEffect(() => {
-    setTitle(charity.title);
-    setDescription(charity.description);
-    setImage(charity.image);
-    setEmail(charity.email);
-    setPhone(charity.phone);
-    setAddress(charity.address);
-    setUserId(charity.userId);
-    console.log('call effect');
+    if (charity) {
+      setTitle(charity.title);
+      setDescription(charity.description);
+      setImage(charity.image);
+      setEmail(charity.email);
+      setPhone(charity.phone);
+      setAddress(charity.address);
+      setUserId(charity.userId);
+      console.log('call effect');
+    }
   }, [charity]);
 
   /** Delete a charity */
