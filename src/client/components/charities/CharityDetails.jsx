@@ -29,6 +29,7 @@ export default function CharityDetails() {
   const [userId, setUserId] = useState(1);
 
   useEffect(() => {
+  if (charity) {
     setTitle(charity.title);
     setDescription(charity.description);
     setImage(charity.image);
@@ -37,7 +38,8 @@ export default function CharityDetails() {
     setAddress(charity.address);
     setUserId(charity.userId);
     console.log('call effect');
-  }, [charity]);
+  }
+}, [charity]);
 
   /** Delete a charity */
   const onDelete = async (evt) => {
@@ -56,7 +58,7 @@ export default function CharityDetails() {
   ) : (
     <>
       <main>
-        <img src={charity.image} />
+        <img src={charity.image} alt={`Logo for ${charity.title}`}/>
         <h2>{charity.title}</h2>
         <h3>{charity.description}</h3>
         <h3>{charity.email}</h3>
