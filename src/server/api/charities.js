@@ -21,6 +21,7 @@ router.get('/', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => {
   try {
     //grabs the id from the charity database
+    console.log('Charity Id:', id);
     const id = +req.params.id;
 
     const charityById = await prisma.post.findUnique({ where: { id } });
@@ -40,7 +41,16 @@ router.get('/:id', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   try {
     //here we grab the properties from the Post schema model
-    const { title, email, image, phone, address, userId } = req.body;
+    const {
+      title,
+      email,
+      image,
+      phone,
+      address,
+      description,
+      category,
+      userId
+    } = req.body;
     // now for each property we give an error handler...
     if (!title) {
       throw new ServerError(400, 'Title is required');
@@ -60,9 +70,9 @@ router.post('/', async (req, res, next) => {
     if (!description) {
       throw new ServerError(400, 'Description is required');
     }
-    // if (!categories) {
-    //   throw new ServerError(400, 'Categories is required');
-    // }
+    if (!category) {
+      throw new ServerError(400, 'Category is required');
+    }
 
     const charity = await prisma.post.create({
       data: {
@@ -72,7 +82,7 @@ router.post('/', async (req, res, next) => {
         phone,
         address,
         description,
-        // categories,
+        category,
         userId
         //CODE FOR AUTH STUFF NEEDS TO BE HERE LATER ON!
       }
@@ -97,7 +107,7 @@ router.put('/:id', async (req, res, next) => {
       phone,
       address,
       description,
-      // categories,
+      category,
       userId
     } = req.body;
 
@@ -113,7 +123,7 @@ router.put('/:id', async (req, res, next) => {
         phone,
         address,
         description,
-        // categories,
+        category,
         userId
       }
     });

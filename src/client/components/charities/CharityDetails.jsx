@@ -1,5 +1,6 @@
+import React from 'react';
 import { useParams } from 'react-router';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
   useGetCharityQuery,
   useDeleteCharityMutation,
@@ -24,19 +25,22 @@ export default function CharityDetails() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
-  // const [categories, setCategories] = useState([]);
+  const [category, setCategory] = useState('');
   // DO NOT ADD UserId
   const [userId, setUserId] = useState(1);
 
   useEffect(() => {
-    setTitle(charity.title);
-    setDescription(charity.description);
-    setImage(charity.image);
-    setEmail(charity.email);
-    setPhone(charity.phone);
-    setAddress(charity.address);
-    setUserId(charity.userId);
-    console.log('call effect');
+    if (charity) {
+      setTitle(charity.title);
+      setDescription(charity.description);
+      setImage(charity.image);
+      setEmail(charity.email);
+      setPhone(charity.phone);
+      setAddress(charity.address);
+      setCategory(charity.category);
+      setUserId(charity.userId);
+      console.log('call effect');
+    }
   }, [charity]);
 
   /** Delete a charity */
@@ -48,7 +52,21 @@ export default function CharityDetails() {
   /** Update a charity */
   const onUpdate = async (evt) => {
     evt.preventDefault();
-    updateCharity({ id, title, description, email, phone, address, userId });
+    updateCharity({
+      id,
+      title,
+      description,
+      email,
+      phone,
+      address,
+      category,
+      userId
+    });
+  };
+
+  const handleCategoryChange = (evt) => {
+    evt.preventDefault();
+    setCategory(evt.target.value);
   };
 
   return isLoading ? (
@@ -62,6 +80,7 @@ export default function CharityDetails() {
         <h3>{charity.email}</h3>
         <h3>{charity.phone}</h3>
         <h3>{charity.address}</h3>
+        <h3>{charity.category}</h3>
         <form onSubmit={onUpdate}>
           <input
             type='text'
@@ -99,12 +118,15 @@ export default function CharityDetails() {
             value={address}
             onChange={(e) => setAddress(e.target.value)}
           ></input>
-          {/* <input
-            type='text'
-            placeholder='Categories'
-            value={categories}
-            onChange={(e) => setCategories(e.target.value)}
-          ></input> */}
+          <select
+            name='category'
+            value={category}
+            onChange={(event) => handleCategoryChange(event.target.value)}
+          >
+            <option id='0'>Food</option>
+            <option id='1'>Clothes</option>
+            <option id='2'>Furniture</option>
+          </select>
           <input
             type='text'
             placeholder='userId'

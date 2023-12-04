@@ -25,6 +25,7 @@ model Post {
   phone       String
   address     String
   description String
+  category    String
   userId      Int
   User        User   @relation(fields: [userId], references: [id])
 }
