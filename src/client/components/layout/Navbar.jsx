@@ -30,7 +30,13 @@ export default function Navbar() {
           <NavLink to='/'>Home</NavLink>
         </li>
         <li>
+<<<<<<< HEAD
+          <NavLink to='/charities/create'>Create</NavLink>
+        </li>
+        <li>
+=======
         <i className='fa-solid fa-person-shelter fa-bounce'></i>
+>>>>>>> main
           <NavLink to='/login'>Login</NavLink>
         </li>
         <li>
