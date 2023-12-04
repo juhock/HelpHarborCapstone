@@ -1,8 +1,16 @@
-# React + Vite
+# Help Harbor The Charity Locator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Help Harbor is a seamless bridge connecting you with charitable causes effortlessly. Discover local charities, their donation needs, and contact details—all without the hassle of extensive research. Save your favorites for instant, direct access to make giving back a breeze.
 
-Currently, two official plugins are available:
+## Authors
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [@Art-Luzrab](https://github.com/Art-Luzrab)
+- [@juhock](https://github.com/juhock)
+- [@Nikiosw](https://github.com/Nikiosw)
+- [@SCousins2183](https://github.com/SCousins2183)
+- [@yingshill](https://github.com/yingshill)
+
+## Tech Stack
+
+**Client** React, Redux, CSS
+**Server** Node, Express, Prisma
