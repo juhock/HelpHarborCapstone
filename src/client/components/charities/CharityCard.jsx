@@ -6,7 +6,7 @@ export default function CharityCard({charity}) {
     return (
         <li className="charity-card">
             <div className="charity-image">
-                <img src={charity.image} />
+                <img src={charity.image} alt={`Logo for ${charity.title}`} />
             </div>
             <section className="charity-info">
                 <h2>{charity.title}</h2>
