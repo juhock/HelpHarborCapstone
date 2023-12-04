@@ -58,7 +58,7 @@ export default function CharityDetails() {
   ) : (
     <>
       <main>
-        <img src={charity.image}/>
+        <img src={charity.image} alt={`Logo for ${charity.title}`}/>
         <h2>{charity.title}</h2>
         <h3>{charity.description}</h3>
         <h3>{charity.email}</h3>
