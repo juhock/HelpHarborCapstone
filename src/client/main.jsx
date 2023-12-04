@@ -9,6 +9,7 @@ import HomePage from '../client/components/Homepage.jsx';
 import { Provider } from 'react-redux';
 import store from './store/index.js';
 import CharityDetails from './components/charities/CharityDetails.jsx';
+import LoginForm from './components/login/LoginForm.jsx';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,6 @@ const router = createBrowserRouter([
         path: '/',
         element: <HomePage />
       },
-      
       {
         path: '/charities',
         element: <CharityList/>
@@ -27,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: '/charities/:id',
         element: <CharityDetails/>
+      },
+      {
+        path: '/login',
+        element: <LoginForm/>
       },
     ]
   }
