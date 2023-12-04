@@ -40,7 +40,7 @@ router.get('/:id', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   try {
     //here we grab the properties from the Post schema model
-    const { title, email, image, phone, address, userId } = req.body;
+    const { title, email, image, phone, address, description, userId } = req.body;
     // now for each property we give an error handler...
     if (!title) {
       throw new ServerError(400, 'Title is required');
