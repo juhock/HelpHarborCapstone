@@ -9,7 +9,6 @@ const prisma = require('../prisma');
 router.get('/', async (req, res, next) => {
   try {
     const charitiesData = await prisma.post.findMany();
-    console.log(charitiesData);
     res.json(charitiesData);
   } catch {
     next();
@@ -69,10 +68,12 @@ router.post('/', async (req, res, next) => {
     if (!description) {
       throw new ServerError(400, 'Description is required');
     }
-    if (!category) {
-      throw new ServerError(400, 'Category is required');
+    if (!categories) {
+      throw new ServerError(400, 'Categories is required');
     }
-
+    if (!userId) {
+      throw new ServerError(400, 'userId is required');
+    }
     const charity = await prisma.post.create({
       data: {
         title,

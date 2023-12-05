@@ -13,7 +13,6 @@ export default function CharityDetails() {
   //these two variables will grab a single charity from the api!!!
   const { id } = useParams();
   const { data: charity, isLoading } = useGetCharityQuery(id);
-
   const [deleteCharity] = useDeleteCharityMutation();
   const [updateCharity] = useUpdateCharityMutation();
 
@@ -68,12 +67,12 @@ export default function CharityDetails() {
     setCategory(evt.target.value);
   };
 
-  return isLoading ? (
+  return isLoading || !charity ? (
     <p>LOADING LOADING LOADING LOADING</p>
   ) : (
     <>
       <main>
-        <img src={charity.image} />
+        <img src={charity.image} alt={`Logo for ${charity.title}`} />
         <h2>{charity.title}</h2>
         <h3>{charity.description}</h3>
         <h3>{charity.email}</h3>
