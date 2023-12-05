@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo2.png';
+import { MenuData } from './MenuData';
 
 export default function Navbar() {
   const [clicked, setClicked] = useState(false);
@@ -24,25 +25,21 @@ export default function Navbar() {
       </div>
 
       <ul className={clicked ? 'nav-menu active' : 'nav-menu'}>
-        <li>
-          <i className='fa-solid fa-anchor fa-bounce'></i>
-          <NavLink to='/'>Home</NavLink>
+
+        {/* The fallowing block of code maps all of the navbar info, 
+        to make any edits move over to MenuData and edit that code.  */}
+        {MenuData.map((item, index)=>{
+            return(
+              <li key={index}>
+          <a href= {item.url} 
+            className={item.nName}>
+            <i className={item.icon}></i>
+            {item.title}
+          </a>
         </li>
-        <li>
-          <NavLink to='/charities/create'>Create</NavLink>
-        </li>
-        <li>
-          <i className='fa-solid fa-person-shelter fa-bounce'></i>
-          <NavLink to='/login'>Login</NavLink>
-        </li>
-        <li>
-          <i className='fa-solid fa-house-flood-water fa-bounce'></i>
-          <NavLink to='/users/me'>Account</NavLink>
-        </li>
-        <li>
-          <i className='fa-solid fa-anchor-circle-exclamation fa-bounce'></i>
-          <NavLink to='/signup'>Signup</NavLink>
-        </li>
+            )
+        })}
+        
       </ul>
     </nav>
   );

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Footerbar() {
   return (
+    <footernav>
     <ul>
       <li>
         <Link to='/'>Home</Link>
@@ -15,5 +16,6 @@ export default function Footerbar() {
         <Link to='/users/me'>Account</Link>
       </li>
     </ul>
+    </footernav>
   );
 }
