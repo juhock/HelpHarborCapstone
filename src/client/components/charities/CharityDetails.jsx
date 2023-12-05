@@ -23,7 +23,7 @@ export default function CharityDetails() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
-  // const [categories, setCategories] = useState([]);
+  const [category, setCategory] = useState('');
   // DO NOT ADD UserId
   const [userId, setUserId] = useState(1);
 
@@ -35,6 +35,7 @@ export default function CharityDetails() {
       setEmail(charity.email);
       setPhone(charity.phone);
       setAddress(charity.address);
+      setCategory(charity.category);
       setUserId(charity.userId);
       console.log('call effect');
     }
@@ -49,7 +50,21 @@ export default function CharityDetails() {
   /** Update a charity */
   const onUpdate = async (evt) => {
     evt.preventDefault();
-    updateCharity({ id, title, description, email, phone, address, userId });
+    updateCharity({
+      id,
+      title,
+      description,
+      email,
+      phone,
+      address,
+      category,
+      userId
+    });
+  };
+
+  const handleCategoryChange = (evt) => {
+    evt.preventDefault();
+    setCategory(evt.target.value);
   };
 
   return isLoading || !charity ? (
@@ -63,6 +78,7 @@ export default function CharityDetails() {
         <h3>{charity.email}</h3>
         <h3>{charity.phone}</h3>
         <h3>{charity.address}</h3>
+        <h3>{charity.category}</h3>
         <form onSubmit={onUpdate}>
           <input
             type='text'
@@ -100,12 +116,15 @@ export default function CharityDetails() {
             value={address}
             onChange={(e) => setAddress(e.target.value)}
           ></input>
-          {/* <input
-            type='text'
-            placeholder='Categories'
-            value={categories}
-            onChange={(e) => setCategories(e.target.value)}
-          ></input> */}
+          <select
+            name='category'
+            value={category}
+            onChange={(e) => handleCategoryChange(e)}
+          >
+            <option>Food</option>
+            <option>Clothes</option>
+            <option>Furniture</option>
+          </select>
           <input
             type='text'
             placeholder='userId'
