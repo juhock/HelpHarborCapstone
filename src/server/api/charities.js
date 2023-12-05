@@ -9,7 +9,6 @@ const prisma = require('../prisma');
 router.get('/', async (req, res, next) => {
   try {
     const charitiesData = await prisma.post.findMany();
-    console.log(charitiesData);
     res.json(charitiesData);
   } catch {
     next();
@@ -40,7 +39,8 @@ router.get('/:id', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   try {
     //here we grab the properties from the Post schema model
-    const { title, email, image, phone, address, description, userId } = req.body;
+    const { title, email, image, phone, address, description, userId } =
+      req.body;
     // now for each property we give an error handler...
     if (!title) {
       throw new ServerError(400, 'Title is required');
@@ -61,8 +61,8 @@ router.post('/', async (req, res, next) => {
       throw new ServerError(400, 'Description is required');
     }
     if (!userId) {
-        throw new ServerError(400, 'userId is required');
-    } 
+      throw new ServerError(400, 'userId is required');
+    }
 
     const charity = await prisma.post.create({
       data: {
