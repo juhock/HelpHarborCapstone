@@ -13,7 +13,6 @@ export default function CharityDetails() {
   //these two variables will grab a single charity from the api!!!
   const { id } = useParams();
   const { data: charity, isLoading } = useGetCharityQuery(id);
-
   const [deleteCharity] = useDeleteCharityMutation();
   const [updateCharity] = useUpdateCharityMutation();
 
