@@ -12,6 +12,7 @@ import CharityDetails from './components/charities/CharityDetails.jsx';
 import NewCharity from './components/charities/NewCharity.jsx';
 import LoginForm from './components/login/LoginForm.jsx';
 import Register from './components/login/Register.jsx';
+import AccountPage from './components/login/Account.jsx';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register/>
+      },
+      {
+        path: '/users/me',
+        element: <AccountPage/>
       },
     ]
   }
