@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useCreateCharityMutation } from "./charitiesSlice";
+import '../login/Global.css';
 
 /**Form for creating a new charity */
 export default function NewCharity() {
@@ -20,7 +21,7 @@ export default function NewCharity() {
   }
 
   return (
-    <div>
+    <div class="global">
     <p>The Form to create new post</p>
     <form onSubmit={onCreate}>
           <input
