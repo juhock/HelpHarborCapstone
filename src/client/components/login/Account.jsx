@@ -4,11 +4,14 @@ import '../login/Global.css';
 
 export default function AccountPage() {
   return (
-    <div className='global'>
+    <section>
+  <div className='global'>
       <h2>My Account</h2>
       <h3>Name: </h3>
       <h3>User ID: </h3>
       <h3>Favorites potentially listed here:</h3>
     </div>
+    </section>
+  
   );
 }

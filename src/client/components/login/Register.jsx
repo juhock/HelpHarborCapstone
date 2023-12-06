@@ -11,6 +11,7 @@ export default function Register() {
   }
 
   return (
+    <section>
     <div className='global'>
       <form onSubmit={handleSubmit}>
         <h3>Register Form</h3>
@@ -39,5 +40,6 @@ export default function Register() {
         <br />
       </form>
     </div>
+    </section>
   );
 }
