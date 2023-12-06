@@ -41,7 +41,7 @@ export default function LoginForm() {
 
   return (
     <section>
-    <div class="global">
+    <div className='global'>
       <h1>{authAction}</h1>
       <form onSubmit={handleSubmit}>
         <h3>Login Form</h3>
