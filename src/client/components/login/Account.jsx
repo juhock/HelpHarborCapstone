@@ -1,8 +1,14 @@
 import { React } from 'react';
 import Footerbar from '../layout/Footernav';
 import '../login/Global.css';
+import { useGetUserAccountQuery } from './authslice';
 
 export default function AccountPage() {
+  const me = useGetUserAccountQuery();
+
+  console.log(' - - - - -');
+  console.log(`me:`);
+  console.log(JSON.stringify(me, null, 2));
   return (
     <div className='global'>
       <h2>My Account</h2>
