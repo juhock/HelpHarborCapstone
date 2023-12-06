@@ -10,9 +10,14 @@ import { Provider } from 'react-redux';
 import store from './store/index.js';
 import CharityDetails from './components/charities/CharityDetails.jsx';
 import NewCharity from './components/charities/NewCharity.jsx';
+
 import LoginForm from './components/login/LoginForm.jsx';
 import Register from './components/login/Register.jsx';
 import AccountPage from './components/login/Account.jsx';
+
+import ClothesCat from './components/categories/Clothes.jsx';
+import FurnitureCat from './components/categories/Furniture.jsx';
+import FoodCat from './components/categories/Food.jsx';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +51,18 @@ const router = createBrowserRouter([
       {
         path: '/users/me',
         element: <AccountPage/>
+      },
+      {
+        path: '/clothes',
+        element: <ClothesCat/>
+      },
+      {
+        path: '/furniture',
+        element: <FurnitureCat/>
+      },
+      {
+        path: '/food',
+        element: <FoodCat/>
       },
     ]
   }
