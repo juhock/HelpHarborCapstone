@@ -9,9 +9,9 @@ import './Homepage.css';
 export default function HomePage() {
   return (
     <>
-      <div class='background'>
+      <div className='background'>
         <section>
-          <div class='welcomeMsg'>
+          <div className='welcomeMsg'>
             <h1>Welcome to Help Harbor</h1>
             <p>
               Welcome to Help Harbor, a beacon of compassion and collaboration
@@ -28,29 +28,24 @@ export default function HomePage() {
               voyage toward a better, more caring world. Join us at Help Harbor,
               where every click, share, and contribution creates ripples of
               positive change.
-              <div className='services'>
-                <Link to={'/clothes'}>
-                  <img src={hanger} height={50} width={50} alt='Clothes' />
-                </Link>
-                <br />
-                <Link to={'/food'}>
-                  <img src={burgericon} height={50} width={50} alt='Food' />
-                </Link>
-                <br />
-                <Link to={'/furniture'}>
-                  <img src={couch} height={50} width={50} alt='Furniture' />
-                </Link>
-                <br />
-                <Link to={'/charities'}>
-                  <img
-                    src={infinity}
-                    height={50}
-                    width={50}
-                    alt='All Charities'
-                  />
-                </Link>
-              </div>
             </p>
+          </div>
+          <div className='services'>
+            <Link to={'/clothes'}>
+              <img src={hanger} height={50} width={50} alt='Clothes' />
+            </Link>
+            <br />
+            <Link to={'/food'}>
+              <img src={burgericon} height={50} width={50} alt='Food' />
+            </Link>
+            <br />
+            <Link to={'/furniture'}>
+              <img src={couch} height={50} width={50} alt='Furniture' />
+            </Link>
+            <br />
+            <Link to={'/charities'}>
+              <img src={infinity} height={50} width={50} alt='All Charities' />
+            </Link>
           </div>
         </section>
       </div>

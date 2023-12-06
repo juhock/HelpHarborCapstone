@@ -5,7 +5,7 @@ import { FooterMenuData } from './FooterMenuData';
 
 export default function Footerbar() {
   return (
-    <footernav className='FooterBarItems'>
+    <div className='FooterBarItems'>
       <ul>
         {FooterMenuData.map((item, index) => {
           return (
@@ -18,6 +18,6 @@ export default function Footerbar() {
           );
         })}
       </ul>
-    </footernav>
+    </div>
   );
 }
