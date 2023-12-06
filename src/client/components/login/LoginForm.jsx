@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { React, useState } from 'react';
+import '../login/Global.css';
+
 
 export default function LoginForm() {
   const [username, setUsername] = useState('');
@@ -10,6 +12,7 @@ export default function LoginForm() {
   }
 
   return (
+    <div class="global">
     <form onSubmit={handleSubmit}>
       <h3>Login Form</h3>
       <label>
@@ -27,5 +30,6 @@ export default function LoginForm() {
       <br />
 
     </form>
+    </div>
   );
 }
