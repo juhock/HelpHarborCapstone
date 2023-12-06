@@ -1,4 +1,4 @@
-footernav {
+.FooterBarItems {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,29 +14,30 @@ footernav {
      
   }
 
-  footernav ul {
+  ul {
     display: flex;
   }
   
-  footernav ul li {
+  ul li {
     list-style: none;
   }
 
 
-footernav ul li a {
+.footer-nav-links {
     display: block;
     text-decoration: none;
     color: white;
     padding: 0.5rem;
     margin: 0 0.5rem;
     border-radius: 0.5rem;
+    
   }
   
-  footernav ul li a:not(.active):hover {
+   li a:not(.active):hover {
     background-color: #bbc7eb;
   }
 
-  @media (max-width: 500px){
+  @media (max-width: 850px){
     footernav{display: none;
   }
 }
