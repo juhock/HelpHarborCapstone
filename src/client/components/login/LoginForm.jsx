@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import { React, useState } from 'react';
-import { useLoginMutation, useRegisterMutation } from './authslice';
-import { useNavigate } from 'react-router-dom';
-
+import '../login/Global.css';
 export default function LoginForm() {
   const Navigate = useNavigate();
   //Set state for username and passwordd
@@ -35,41 +33,31 @@ export default function LoginForm() {
   };
 
   return (
-    <>
-      <h1>{authAction}</h1>
-      <form onSubmit={handleSubmit}>
-        <h3>Login Form</h3>
-        <label>
-          Username:
-          <input
-            type='text'
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            autoComplete='username'
-          />
-        </label>
+    <form onSubmit={handleSubmit}>
+      <h3>Login Form</h3>
+      <label>
+        Username:
+        <input
+          type='text'
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </label>
 
-        <label>
-          Password:
-          <input
-            type='password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            autoComplete='current-password'
-          />
-        </label>
-        <br />
-        <button>{authAction}</button>
-        <p>
-          No Account? <Link to='/register'>Register here</Link>
-        </p>
-        <br />
-      </form>
-      <a onClick={() => setIsLogin(!isLogin)}>{altCopy}</a>
-      {isLogin && loginError && <p role='alert'>{loginError}</p>}
-      {!isLogin && registerError && <p role='alert'>{registerError}</p>}
-      {loading && <p>Loading</p>}
-      {error && <p>Something Went Wrong</p>}
-    </>
+      <label>
+        Password:
+        <input
+          type='password'
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </label>
+      <br />
+      <button type='submit'>Login</button>
+      <p>
+        No Account? <Link to='/register'>Register here</Link>
+      </p>
+      <br />
+    </form>
   );
 }
