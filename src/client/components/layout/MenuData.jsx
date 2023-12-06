@@ -1,7 +1,7 @@
 export const MenuData = [
   {
     title: "Home",
-    url:"./",
+    url:"/",
     nName:"nav-links",
     icon:"fa-solid fa-anchor fa-bounce"
   },

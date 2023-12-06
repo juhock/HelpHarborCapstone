@@ -1,7 +1,7 @@
 export const FooterMenuData = [
     {
         title: "",
-        url:"./",
+        url:"/",
         nName:"footer-nav-links",
         icon:"fa-solid fa-anchor"
     },
