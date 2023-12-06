@@ -40,7 +40,7 @@ export default function LoginForm() {
   };
 
   return (
-    <>
+    <div class="global">
       <h1>{authAction}</h1>
       <form onSubmit={handleSubmit}>
         <h3>Login Form</h3>
@@ -78,6 +78,6 @@ export default function LoginForm() {
       {!isLogin && registerError && <p role='alert'>{registerError}</p>}
       {loading && <p>Page is Loading...</p>}
       {error && <p>Oops...Something went Wrong!</p>}
-    </>
+    </div>
   );
 }
