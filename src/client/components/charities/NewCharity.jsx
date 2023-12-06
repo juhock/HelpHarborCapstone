@@ -21,6 +21,7 @@ export default function NewCharity() {
   }
 
   return (
+    <section>
     <div class="global">
     <p>The Form to create new post</p>
     <form onSubmit={onCreate}>
@@ -69,5 +70,6 @@ export default function NewCharity() {
           <button>New Post</button>
         </form>
     </div>
+    </section>
   )
 }
