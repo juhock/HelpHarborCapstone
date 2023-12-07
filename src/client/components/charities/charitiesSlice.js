@@ -19,6 +19,13 @@ const charityApi = api.injectEndpoints({
       providesTags: ['Charity']
     }),
 
+    // Get charities by each category
+    getCharitiesInCategory: builder.query({
+      query: (category) => `/charities/${category}`,
+
+      providesTags: ['Charities']
+    }),
+
     //This is useCreateCharityMutation
     createCharity: builder.mutation({
       query: (charity) => ({
@@ -53,6 +60,7 @@ const charityApi = api.injectEndpoints({
 export const {
   useGetCharitiesQuery,
   useGetCharityQuery,
+  useGetCharitiesInCategoryQuery,
   useCreateCharityMutation,
   useDeleteCharityMutation,
   useUpdateCharityMutation
