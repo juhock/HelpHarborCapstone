@@ -1,34 +1,55 @@
-* {
-  padding: 0%;
-  margin: 0%;
-  box-sizing: border-box;
-}
-
 .background {
-  width: 100%;
+  background-color: #f8f8f8;
   height: 100vh;
 }
 
-section {
-  height: 90vh;
+.MessageAndIcons {
   display: flex;
-  position: relative;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 250px;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .welcomeMsg {
-  border: 10px solid #222;
-  max-width: 700px;
-  width: 100%;
-  margin: auto;
+  max-width: 600px;
+}
 
-  height: 50vh;
-  align-items: center;
-  justify-content: center;
+.welcomeMsg h1 {
+  font-size: 2.5em;
+}
 
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+.welcomeMsg p {
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.clothesAndFood,
+.furnitureAndCharities {
+  text-align: center;
+}
+
+.services a {
+  text-decoration: none;
+  color: #333;
+}
+
+.services img {
+  margin: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+  height: 130px;
+  width: 130px;
+}
+
+.services img:hover {
+  transform: scale(1.1);
 }

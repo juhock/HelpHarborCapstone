@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <>
       <div className='background'>
-        <section>
+        <section className="MessageAndIcons">
           <div className='welcomeMsg'>
             <h1>Welcome to Help Harbor</h1>
             <p>
@@ -31,21 +31,31 @@ export default function HomePage() {
             </p>
           </div>
           <div className='services'>
-            <Link to={'/clothes'}>
-              <img src={hanger} height={50} width={50} alt='Clothes' />
-            </Link>
-            <br />
-            <Link to={'/food'}>
-              <img src={burgericon} height={50} width={50} alt='Food' />
-            </Link>
-            <br />
-            <Link to={'/furniture'}>
-              <img src={couch} height={50} width={50} alt='Furniture' />
-            </Link>
-            <br />
-            <Link to={'/charities'}>
-              <img src={infinity} height={50} width={50} alt='All Charities' />
-            </Link>
+            <div className='clothesAndFood'>
+              <Link to={'/clothes'}>
+                <img src={hanger} height={50} width={50} alt='Clothes' />
+              </Link>
+              <br />
+              <Link to={'/food'}>
+                <img src={burgericon} height={50} width={50} alt='Food' />
+              </Link>
+              <br />
+            </div>
+            <div className='furnitureAndCharities'>
+              <Link to={'/furniture'}>
+                <img src={couch} height={50} width={50} alt='Furniture' />
+              </Link>
+              <br />
+              <Link to={'/charities'}>
+                <img
+                  src={infinity}
+                  height={50}
+                  width={50}
+                  alt='All Charities'
+                />
+              </Link>
+              <br />
+            </div>
           </div>
         </section>
       </div>
