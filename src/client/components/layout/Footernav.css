@@ -2,14 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #222;
+  background-color: #0C3B2E;
   position: sticky;
   bottom: 0px;
-  left: 26%;
+  left: 28%;
   padding: 0 30px;
   box-shadow: 0 5px rgb(0, 0, 0, 0.25);
-  width: 50%;
-  height: 30px;
+  width: 40%;
+  height: 40px;
   border-radius: 13px;
 }
 
@@ -29,9 +29,9 @@ ul li {
   margin: 0 0.5rem;
   border-radius: 0.5rem;
 }
-
+/* this taget all both footer and navbar*/
 li a:not(.active):hover {
-  background-color: #bbc7eb;
+  background-color: #6D9773;
 }
 
 @media (max-width: 850px) {
