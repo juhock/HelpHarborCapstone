@@ -7,7 +7,7 @@ export default function CharityList() {
   const { data } = useGetCharitiesQuery();
 
   return (
-    <div>
+    <div className="charityList">
       <h1>List of Charities</h1>
       <div className="tester">
       <ul>
