@@ -23,7 +23,7 @@ const authApi = api.injectEndpoints({
       // usually transform error response goes here, but we don't need it
     }),
     getUserAccount: builder.query({
-      query: () => '/users/ms'
+      query: () => '/users/me'
       // usually transform error response goes here, but we don't need it
     })
   })
