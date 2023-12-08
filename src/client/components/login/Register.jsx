@@ -1,16 +1,32 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { React, useState } from 'react';
 import { useRegisterMutation } from './authslice';
 import '../login/Global.css';
 
 export default function Register() {
+  const navigate = useNavigate();
   const [registerUser] = useRegisterMutation();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    registerUser({ username, password });
+    const authMethod = registerUser;
+    const credentials = { username, password };
+    setLoading(true);
+    setError(null);
+
+    try {
+      //we need to unwrap to handle and catch errors
+      await authMethod(credentials).unwrap();
+      navigate('/');
+    } catch (error) {
+      setError(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -42,6 +58,8 @@ export default function Register() {
           </p>
           <br />
         </form>
+        {loading && <p>Registering your Account</p>}
+        {error && <p>This username is already in use. Please try again.</p>}
       </div>
     </section>
   );
