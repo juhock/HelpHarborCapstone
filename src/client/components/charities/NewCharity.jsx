@@ -14,62 +14,62 @@ export default function NewCharity() {
   const [userId, setUserId] = useState(1);
 
   /** Function to trigger  */
-  const onCreate = async (evt) => {
-    evt.preventDefault();
+  const onCreate = async (e) => {
+    e.preventDefault();
     // Careful: what about "userId"?
     createCharity({ title, description, image, email, phone, address, userId });
   };
 
   return (
     <section>
-    <div className='global'>
-      <p>The Form to create new post</p>
-      <form onSubmit={onCreate}>
-        <input
-          type='text'
-          placeholder='Title'
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        ></input>
-        <input
-          type='text'
-          placeholder='Description'
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        ></input>
-        <input
-          type='text'
-          placeholder='Image'
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-        ></input>
-        <input
-          type='text'
-          placeholder='Email'
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        ></input>
-        <input
-          type='text'
-          placeholder='Phone'
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-        ></input>
-        <input
-          type='text'
-          placeholder='Address'
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-        ></input>
-        <input
-          type='text'
-          placeholder='userId'
-          value={+userId}
-          onChange={(e) => setUserId(e.target.value)}
-        ></input>
-        <button>New Post</button>
-      </form>
-    </div>
+      <div className='global'>
+        <p>The Form to create new post</p>
+        <form onSubmit={onCreate}>
+          <input
+            type='text'
+            placeholder='Title'
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          ></input>
+          <input
+            type='text'
+            placeholder='Description'
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          ></input>
+          <input
+            type='text'
+            placeholder='Image'
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+          ></input>
+          <input
+            type='text'
+            placeholder='Email'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          ></input>
+          <input
+            type='text'
+            placeholder='Phone'
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          ></input>
+          <input
+            type='text'
+            placeholder='Address'
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+          ></input>
+          <input
+            type='text'
+            placeholder='userId'
+            value={+userId}
+            onChange={(e) => setUserId(e.target.value)}
+          ></input>
+          <button>New Post</button>
+        </form>
+      </div>
     </section>
   );
 }
