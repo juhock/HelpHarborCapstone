@@ -13,7 +13,7 @@ export default function HomePage() {
         <section className="MessageAndIcons">
           <div className='welcomeMsg'>
             <h1 className="msg">Welcome to Help Harbor!</h1>
-            <h2>Click the following icons the access our partners in need!</h2>
+            <h2>Click the following icons to access our partners in need!</h2>
             {/* <p>
               Welcome to Help Harbor, a beacon of compassion and collaboration
               in the world of philanthropy. At Help Harbor, our mission is
