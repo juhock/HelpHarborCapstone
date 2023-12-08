@@ -44,11 +44,10 @@ ul {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .charity-card {
-  width: calc(33.33% - 20px);
   margin-bottom: 20px;
   padding: 15px;
   box-shadow: 0 2px 4px rgb(252, 250, 112);
@@ -58,7 +57,9 @@ ul {
   background-color: whitesmoke;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgb(10, 46, 102);
-  height: 32em;
+  height: 22em;
+
+  text-align: center;
 }
 
 .charity-card:hover {
@@ -66,7 +67,7 @@ ul {
 }
 
 .charity-card img {
-  max-width: 90%;
+  width: 50%;
   height: auto;
-  display: block;
+  display: inline-block;
 }
