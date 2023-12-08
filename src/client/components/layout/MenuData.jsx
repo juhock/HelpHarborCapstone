@@ -25,6 +25,12 @@ if(token){ MenuData.push(
     nName:"nav-links",
     icon:"fa-solid fa-laptop-file fa-bounce"
   },
+  {
+    title: "Logout",
+    url:"/",
+    nName:"nav-links",
+    icon:"fa-solid fa-person-walking-arrow-loop-left fa-bounce"
+  },
 )} else { MenuData.push(
   {
     title: "Login",
