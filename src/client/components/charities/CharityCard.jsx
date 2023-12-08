@@ -7,9 +7,8 @@ export default function CharityCard({ charity }) {
         <img src={charity.image} alt={`Logo for ${charity.title}`} />
       </div>
       <section className="charity-info">
-        <h2>{charity.title}</h2>
-        <h3>{charity.email}</h3>
-        <p>This is where a bio will go </p>
+        <h2 className="charityTitle">{charity.title}</h2>
+        <h3 className="charityDescription">{charity.description}</h3>
         <Link to={`/charities/${charity.id}`} className="charity-link">
           More Details
         </Link>
