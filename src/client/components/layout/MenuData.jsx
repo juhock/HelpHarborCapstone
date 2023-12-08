@@ -9,12 +9,7 @@ export function getMenuData(token){
     icon:"fa-solid fa-anchor fa-bounce"
   },
 
-  {
-    title: "Create",
-    url:"/charities/create",
-    nName:"nav-links",
-    icon:"fa-solid fa-laptop-file fa-bounce"
-  },
+
 ]
 
 if(token){ MenuData.push(
@@ -23,6 +18,12 @@ if(token){ MenuData.push(
     url:"/users/me",
     nName:"nav-links",
     icon:"fa-solid fa-house-flood-water fa-bounce"
+  },
+  {
+    title: "Create",
+    url:"/charities/create",
+    nName:"nav-links",
+    icon:"fa-solid fa-laptop-file fa-bounce"
   },
 )} else { MenuData.push(
   {
