@@ -1,0 +1,68 @@
+.charityList {
+  margin: 75px 50px 50px 40px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.charity-card {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 4px orange;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.charity-card:hover {
+  transform: translateY(-5px);
+}
+
+.charity-card {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px orange;
+  height: 500px;
+}
+
+.charity-card img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
+
+.charity-card h2 {
+  color: #2d5e7e;
+  font-size: 22px;
+}
+
+.charity-card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.charity-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.charity-link {
+  text-decoration: none;
+  font-size: small;
+}
