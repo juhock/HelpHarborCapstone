@@ -68,7 +68,7 @@ export default function CharityDetails() {
   };
 
   return isLoading || !charity ? (
-    <p>LOADING LOADING LOADING LOADING</p>
+    <p>Charity is Loading</p>
   ) : (
     <>
       <main>
