@@ -33,7 +33,7 @@ export default function Register() {
           />
         </label>
         <br />
-        <button type='submit'>Login</button>
+        <button type='submit'>Register</button>
         <p>
           Already Registered? <Link to='/login'>Login here!</Link>
         </p>

@@ -1,4 +1,7 @@
-export const MenuData = [
+
+
+export function getMenuData(token){
+ const MenuData = [
   {
     title: "Home",
     url:"/",
@@ -6,13 +9,23 @@ export const MenuData = [
     icon:"fa-solid fa-anchor fa-bounce"
   },
 
+
+]
+
+if(token){ MenuData.push(
+  {
+    title: "Account",
+    url:"/users/me",
+    nName:"nav-links",
+    icon:"fa-solid fa-house-flood-water fa-bounce"
+  },
   {
     title: "Create",
     url:"/charities/create",
     nName:"nav-links",
     icon:"fa-solid fa-laptop-file fa-bounce"
   },
-
+)} else { MenuData.push(
   {
     title: "Login",
     url:"/login",
@@ -21,16 +34,14 @@ export const MenuData = [
   },
 
   {
-    title: "Account",
-    url:"/users/me",
-    nName:"nav-links",
-    icon:"fa-solid fa-house-flood-water fa-bounce"
-  },
-
-  {
     title: "Signup!",
     url:"/signup",
     nName:"nav-links-mobile",
     icon:"fa-solid fa-anchor-circle-exclamation fa-bounce"
   },
-]
+)
+  
+}
+return MenuData;
+}
+
