@@ -38,6 +38,7 @@ export default function Navbar() {
         to make any edits move over to MenuData and edit that code.  */}
         {getMenuData(token).map((item, index)=>{
             return( 
+              <>
               <li key={index}>
           <a href= {item.url} 
             className={item.nName}>
@@ -45,6 +46,7 @@ export default function Navbar() {
             {item.title}
           </a>
         </li>
+         </>
             )
         })}
         
