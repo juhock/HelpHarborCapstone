@@ -14,7 +14,7 @@ export const MenuData = [
   },
 
   {
-    title: "login",
+    title: "Login",
     url:"/login",
     nName:"nav-links",
     icon:"fa-solid fa-person-walking-dashed-line-arrow-right fa-bounce"
