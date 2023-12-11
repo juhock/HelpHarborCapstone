@@ -18,6 +18,7 @@ import AccountPage from './components/login/Account.jsx';
 import ClothesCat from './components/categories/Clothes.jsx';
 import FurnitureCat from './components/categories/Furniture.jsx';
 import FoodCat from './components/categories/Food.jsx';
+import AboutUs from './components/AboutUs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,12 @@ const router = createBrowserRouter([
         path: '/',
         element: <HomePage />
       },
+
+      {
+        path:'/about',
+        element: <AboutUs />
+      },
+
       {
         path: '/charities',
         element: <CharityList />

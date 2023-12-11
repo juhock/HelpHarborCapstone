@@ -9,7 +9,7 @@ export function getMenuData(token) {
 
     {
       title: 'About us',
-      url: '',
+      url: '/about',
       nName: 'nav-links',
       icon: 'fa-solid fa-life-ring fa-bounce',
     },
