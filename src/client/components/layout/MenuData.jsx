@@ -5,7 +5,14 @@ export function getMenuData(token) {
       url: '/',
       nName: 'nav-links',
       icon: 'fa-solid fa-anchor fa-bounce'
-    }
+    },
+
+    {
+      title: 'About us',
+      url: '',
+      nName: 'nav-links',
+      icon: 'fa-solid fa-life-ring fa-bounce',
+    },
   ];
 
   if (token) {
@@ -44,7 +51,7 @@ export function getMenuData(token) {
         url: '/signup',
         nName: 'nav-links-mobile',
         icon: 'fa-solid fa-anchor-circle-exclamation fa-bounce'
-      }
+      },
     );
   }
   return MenuData;
