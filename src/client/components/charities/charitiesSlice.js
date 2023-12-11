@@ -21,7 +21,7 @@ const charityApi = api.injectEndpoints({
 
     // Get charities by each category
     getCharitiesInCategory: builder.query({
-      query: (category) => `/charities/${category}`,
+      query: (category) => `/charities/categories/${category}`,
 
       providesTags: ['Charities']
     }),

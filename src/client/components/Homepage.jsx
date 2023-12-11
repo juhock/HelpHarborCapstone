@@ -32,17 +32,17 @@ export default function HomePage() {
           </div>
           <div className='services'>
             <div className='clothesAndFood'>
-              <Link to={'/clothes'}>
+              <Link to={'/categories/clothes'}>
                 <img src={hanger} height={50} width={50} alt='Clothes' />
               </Link>
               <br />
-              <Link to={'/food'}>
+              <Link to={'/categories/food'}>
                 <img src={burgericon} height={50} width={50} alt='Food' />
               </Link>
               <br />
             </div>
             <div className='furnitureAndCharities'>
-              <Link to={'/furniture'}>
+              <Link to={'/categories/furniture'}>
                 <img src={couch} height={50} width={50} alt='Furniture' />
               </Link>
               <br />

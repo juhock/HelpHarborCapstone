@@ -15,9 +15,7 @@ import LoginForm from './components/login/LoginForm.jsx';
 import Register from './components/login/Register.jsx';
 import AccountPage from './components/login/Account.jsx';
 
-import ClothesCat from './components/categories/Clothes.jsx';
-import FurnitureCat from './components/categories/Furniture.jsx';
-import FoodCat from './components/categories/Food.jsx';
+import CategoryTemplate from './components/categories/CategoryTemplate.jsx';
 
 const router = createBrowserRouter([
   {
@@ -53,17 +51,9 @@ const router = createBrowserRouter([
         element: <AccountPage/>
       },
       {
-        path: '/clothes',
-        element: <ClothesCat/>
-      },
-      {
-        path: '/furniture',
-        element: <FurnitureCat/>
-      },
-      {
-        path: '/food',
-        element: <FoodCat/>
-      },
+        path: 'categories/:category',
+        element: <CategoryTemplate />
+      }
     ]
   }
 ]);
