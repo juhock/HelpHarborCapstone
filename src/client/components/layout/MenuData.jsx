@@ -26,8 +26,7 @@ export function getMenuData(token) {
         title: 'Logout',
         url: '/',
         nName: 'nav-links',
-        icon: 'fa-solid fa-person-walking-arrow-loop-left fa-bounce',
-        id: 'logout-nav'
+        icon: 'fa-solid fa-person-walking-arrow-loop-left fa-bounce'
       }
     );
   } else {
