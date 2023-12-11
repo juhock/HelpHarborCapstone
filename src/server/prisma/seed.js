@@ -17,7 +17,7 @@ const seed = async () => {
             phone: '132-526-7390',
             address: '123 Rainbow Rd',
             description: 'We need clothes!',
-            category: 'Clothes'
+            category: 'clothes'
           },
           {
             title: 'Food Pantry',
@@ -27,7 +27,7 @@ const seed = async () => {
             phone: '133-656-7390',
             address: '88 Yellow Brick Rd',
             description: 'We need food!',
-            category: 'Food'
+            category: 'food'
           },
           {
             title: 'Redemption Arc',
@@ -37,7 +37,7 @@ const seed = async () => {
             phone: '663-466-6690',
             address: '101 Sea World Rd',
             description: 'We need furniture!',
-            category: 'Furniture'
+            category: 'furniture'
           },
           {
             title: 'Emergency Groceries',
@@ -47,7 +47,7 @@ const seed = async () => {
             phone: '233-326-7790',
             address: '404 Electric Avenue',
             description: 'We need clothes!',
-            category: 'Clothes'
+            category: 'clothes'
           },
           {
             title: 'Santa Clarita Hospital',
@@ -57,7 +57,7 @@ const seed = async () => {
             phone: '113-467-7867',
             address: '90 Backstreet Back Blv',
             description: 'We need clothes!',
-            category: 'Clothes'
+            category: 'clothes'
           },
           {
             title: 'Great Will',
@@ -67,7 +67,7 @@ const seed = async () => {
             phone: '111-422-7640',
             address: '82 Cherry Brick Road',
             description: 'We need food!',
-            category: 'Food'
+            category: 'food'
           },
           {
             title: 'Charity Comet',
@@ -77,7 +77,7 @@ const seed = async () => {
             phone: '993-496-9990',
             address: '1000 Houston Avenue',
             description: 'We need furniture!',
-            category: 'Furniture'
+            category: 'furniture'
           },
           {
             title: 'Giving Tree',
@@ -87,7 +87,7 @@ const seed = async () => {
             phone: '888-488-9890',
             address: '737 Applesauce Lane',
             description: 'We need furniture!',
-            category: 'Furniture'
+            category: 'furniture'
           },
           {
             title: 'Hugs 4 Bugs',
@@ -97,7 +97,7 @@ const seed = async () => {
             phone: '773-455-5890',
             address: '3 Anthill Road',
             description: 'We need food!',
-            category: 'Food'
+            category: 'food'
           },
           {
             title: 'Compass of Courage',
@@ -107,7 +107,7 @@ const seed = async () => {
             phone: '453-346-7000',
             address: '333 Sea Street',
             description: 'We need clothes!',
-            category: 'Clothes'
+            category: 'clothes'
           }
         ]
       }
