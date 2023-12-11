@@ -40,7 +40,7 @@ export function getMenuData(token) {
 
       {
         title: 'Signup!',
-        url: '/signup',
+        url: '/register',
         nName: 'nav-links-mobile',
         icon: 'fa-solid fa-anchor-circle-exclamation fa-bounce'
       }

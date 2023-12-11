@@ -41,45 +41,47 @@ export default function LoginForm() {
 
   return (
     <section>
-    <div className='global'>
-      <h1>{authAction}</h1>
-      <form onSubmit={handleSubmit}>
-        <h3>Login Form</h3>
-        <label>
-          Username:
-          <input
-            type='text'
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            autoComplete='username'
-          />
-        </label>
+      <div className='global'>
+        <h1>{authAction}</h1>
+        <form onSubmit={handleSubmit}>
+          <h3>Login Form</h3>
+          <label>
+            Username:
+            <input
+              type='text'
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              autoComplete='username'
+            />
+          </label>
 
-        <label>
-          Password:
-          <input
-            type='password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            autoComplete='current-password'
-          />
-        </label>
+          <label>
+            Password:
+            <input
+              type='password'
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete='current-password'
+            />
+          </label>
 
-        <br />
-        <button>{authAction}</button>
-        <p>
-          No Account? <Link to='/register'>Register here</Link>
-        </p>
-        <br />
-      </form>
+          <br />
+          <button>{authAction}</button>
+          <p>
+            No Account? <Link to='/register'>Register here</Link>
+          </p>
+          <br />
+        </form>
 
-      <a onClick={() => setIsLogin(!isLogin)}>{altCopy}</a>
+        <a onClick={() => setIsLogin(!isLogin)}>{altCopy}</a>
 
-      {isLogin && loginError && <p role='alert'>{loginError}</p>}
-      {!isLogin && registerError && <p role='alert'>{registerError}</p>}
-      {loading && <p>Page is Loading...</p>}
-      {error && <p>Oops...Something went Wrong!</p>}
-    </div>
+        {isLogin && loginError && (
+          <p>Username or Password is Incorrect. Please try again.</p>
+        )}
+        {!isLogin && registerError && (
+          <p>Username or Password is Incorrect. Please try again.</p>
+        )}
+      </div>
     </section>
   );
 }
