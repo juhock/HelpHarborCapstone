@@ -16,6 +16,7 @@ import Register from './components/login/Register.jsx';
 import AccountPage from './components/login/Account.jsx';
 
 import CategoryTemplate from './components/categories/CategoryTemplate.jsx';
+import AboutUs from './components/AboutUs.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -25,6 +26,12 @@ const router = createBrowserRouter([
         path: '/',
         element: <HomePage />
       },
+
+      {
+        path:'/about',
+        element: <AboutUs />
+      },
+
       {
         path: '/charities',
         element: <CharityList />

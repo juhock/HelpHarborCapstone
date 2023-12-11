@@ -1,10 +1,17 @@
 export function getMenuData(token) {
   const MenuData = [
     {
-      title: "Home",
-      url: "/",
-      nName: "nav-links",
-      icon: "fa-solid fa-anchor fa-bounce",
+      title: 'Home',
+      url: '/',
+      nName: 'nav-links',
+      icon: 'fa-solid fa-anchor fa-bounce'
+    },
+
+    {
+      title: 'About us',
+      url: '/about',
+      nName: 'nav-links',
+      icon: 'fa-solid fa-life-ring fa-bounce',
     },
   ];
 
