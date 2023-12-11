@@ -1,9 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useCreateCharityMutation } from './charitiesSlice';
+import { useParams } from 'react-router';
 import '../login/Global.css';
 
 /**Form for creating a new charity */
 export default function NewCharity() {
+  const { id } = useParams();
+  const {data: charity, isLoading } = useCreateCharityMutation(id)
+
+
+
+
   const [createCharity] = useCreateCharityMutation();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -11,13 +18,41 @@ export default function NewCharity() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
-  const [userId, setUserId] = useState(1);
+  const [category, setCategory] = useState('');
+
+  useEffect(() => {
+    if (charity) {
+      setTitle(charity.title);
+      setDescription(charity.description);
+      setImage(charity.image);
+      setEmail(charity.email);
+      setPhone(charity.phone);
+      setAddress(charity.address);
+      setCategory(charity.category);
+    }
+  }, [charity]);
+
+
+
 
   /** Function to trigger  */
   const onCreate = async (e) => {
     e.preventDefault();
-    // Careful: what about "userId"?
-    createCharity({ title, description, image, email, phone, address, userId });
+   
+    createCharity({ 
+      title, 
+      description, 
+      image, 
+      email, 
+      phone, 
+      address, 
+      category 
+    });
+  };
+
+  const handleCategoryChange = (evt) => {
+    evt.preventDefault();
+    setCategory(evt.target.value);
   };
 
   return (
@@ -61,12 +96,16 @@ export default function NewCharity() {
             value={address}
             onChange={(e) => setAddress(e.target.value)}
           ></input>
-          <input
-            type='text'
-            placeholder='userId'
-            value={+userId}
-            onChange={(e) => setUserId(e.target.value)}
-          ></input>
+          <select
+          name='category'
+          value={category}
+          onChange={(e) => handleCategoryChange(e)}
+          >
+            <option>Please Select A Category</option>
+            <option>Food</option>
+            <option>Clothes</option>
+            <option>Furniture</option>
+          </select>
           <button>New Post</button>
         </form>
       </div>
