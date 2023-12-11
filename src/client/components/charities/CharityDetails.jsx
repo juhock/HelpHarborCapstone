@@ -49,6 +49,7 @@ export default function CharityDetails() {
     updateCharity({
       id,
       title,
+      image,
       description,
       email,
       phone,
