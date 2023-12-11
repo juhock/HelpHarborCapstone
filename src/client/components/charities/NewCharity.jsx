@@ -11,13 +11,13 @@ export default function NewCharity() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
-  const [userId, setUserId] = useState(1);
+  // const [userId, setUserId] = useState(1);
 
   /** Function to trigger  */
   const onCreate = async (e) => {
     e.preventDefault();
     // Careful: what about "userId"?
-    createCharity({ title, description, image, email, phone, address, userId });
+    createCharity({ title, description, image, email, phone, address });
   };
 
   return (
@@ -61,12 +61,12 @@ export default function NewCharity() {
             value={address}
             onChange={(e) => setAddress(e.target.value)}
           ></input>
-          <input
+          {/* <input
             type='text'
             placeholder='userId'
             value={+userId}
             onChange={(e) => setUserId(e.target.value)}
-          ></input>
+          ></input> */}
           <button>New Post</button>
         </form>
       </div>
