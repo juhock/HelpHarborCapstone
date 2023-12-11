@@ -66,7 +66,7 @@ router.post('/', async (req, res, next) => {
       address,
       description,
       category,
-      userId
+      // userId
     } = req.body;
     // now for each property we give an error handler...
     if (!title) {
@@ -87,12 +87,12 @@ router.post('/', async (req, res, next) => {
     if (!description) {
       throw new ServerError(400, 'Description is required');
     }
-    if (!categories) {
-      throw new ServerError(400, 'Categories is required');
+    if (!category) {
+      throw new ServerError(400, 'Category is required');
     }
-    if (!userId) {
-      throw new ServerError(400, 'userId is required');
-    }
+    // if (!userId) {
+    //   throw new ServerError(400, 'userId is required');
+    // }
     const charity = await prisma.post.create({
       data: {
         title,
@@ -102,7 +102,7 @@ router.post('/', async (req, res, next) => {
         address,
         description,
         category,
-        userId
+        User: { connect: { id: res.locals.user.id } },
         //CODE FOR AUTH STUFF NEEDS TO BE HERE LATER ON!
       }
     });

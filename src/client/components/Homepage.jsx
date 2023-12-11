@@ -12,8 +12,9 @@ export default function HomePage() {
       <div className='background'>
         <section className="MessageAndIcons">
           <div className='welcomeMsg'>
-            <h1>Welcome to Help Harbor</h1>
-            <p>
+            <h1 className="msg">Welcome to Help Harbor!</h1>
+            <h2>Click the following icons to access our partners in need!</h2>
+            {/* <p>
               Welcome to Help Harbor, a beacon of compassion and collaboration
               in the world of philanthropy. At Help Harbor, our mission is
               simple yet profound: to bridge the gap between charitable
@@ -28,7 +29,7 @@ export default function HomePage() {
               voyage toward a better, more caring world. Join us at Help Harbor,
               where every click, share, and contribution creates ripples of
               positive change.
-            </p>
+            </p> */}
           </div>
           <div className='services'>
             <div className='clothesAndFood'>

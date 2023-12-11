@@ -1,16 +1,18 @@
 .FooterBarItems {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  background-color: #0C3B2E;
-  position: sticky;
-  bottom: 0px;
-  left: 28%;
+  background-color: #0c3b2e;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
   padding: 0 30px;
   box-shadow: 0 5px rgb(0, 0, 0, 0.25);
   width: 40%;
   height: 40px;
   border-radius: 13px;
+  z-index: 10;
+  transform: translate(-50%);
 }
 
 ul {
@@ -29,13 +31,13 @@ ul li {
   margin: 0 0.5rem;
   border-radius: 0.5rem;
 }
-/* this taget all both footer and navbar*/
+/* this tagets both footer and navbar*/
 li a:not(.active):hover {
-  background-color: #6D9773;
+  background-color: #6d9773;
 }
 
 @media (max-width: 850px) {
   .FooterBarItems {
-    display: none;
+    display: flex;
   }
 }

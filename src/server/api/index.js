@@ -1,5 +1,5 @@
 const { ServerError } = require('../errors');
-// const prisma = require("../prisma")
+const prisma = require('../prisma');
 const jwt = require('./auth/jwt');
 
 const router = require('express').Router();
@@ -30,3 +30,6 @@ router.use('/charities', require('./charities'));
 
 //this route is to grab the auth stuff
 router.use('/auth', require('./auth'));
+
+//this route will fetch user info
+router.use('/users', require('./users'));

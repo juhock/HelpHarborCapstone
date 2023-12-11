@@ -9,8 +9,7 @@ const authApi = api.injectEndpoints({
       query: (credentials) => ({
         url: '/auth/register',
         method: 'POST',
-        body,
-        credentials
+        body: credentials
       })
       // usually transform error response goes here, but we don't need it
     }),
@@ -23,7 +22,7 @@ const authApi = api.injectEndpoints({
       // usually transform error response goes here, but we don't need it
     }),
     getUserAccount: builder.query({
-      query: () => '/users/ms'
+      query: () => '/users/me'
       // usually transform error response goes here, but we don't need it
     })
   })

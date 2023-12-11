@@ -1,5 +1,5 @@
 import { useParams } from 'react-router';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
   useGetCharityQuery,
   useDeleteCharityMutation,
@@ -24,8 +24,6 @@ export default function CharityDetails() {
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
   const [category, setCategory] = useState('');
-  // DO NOT ADD UserId
-  const [userId, setUserId] = useState(1);
 
   useEffect(() => {
     if (charity) {
@@ -36,8 +34,6 @@ export default function CharityDetails() {
       setPhone(charity.phone);
       setAddress(charity.address);
       setCategory(charity.category);
-      setUserId(charity.userId);
-      console.log('call effect');
     }
   }, [charity]);
 
@@ -57,8 +53,7 @@ export default function CharityDetails() {
       email,
       phone,
       address,
-      category,
-      userId
+      category
     });
   };
 
@@ -68,7 +63,7 @@ export default function CharityDetails() {
   };
 
   return isLoading || !charity ? (
-    <p>LOADING LOADING LOADING LOADING</p>
+    <p>Charity is Loading</p>
   ) : (
     <>
       <main>
@@ -125,12 +120,6 @@ export default function CharityDetails() {
             <option>Clothes</option>
             <option>Furniture</option>
           </select>
-          <input
-            type='text'
-            placeholder='userId'
-            value={+userId}
-            onChange={(e) => setUserId(e.target.value)}
-          ></input>
           <button>Update</button>
           <button onClick={onDelete} aria-label='delete'>
             Delete
