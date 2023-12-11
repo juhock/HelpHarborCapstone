@@ -1,10 +1,12 @@
-import { useParams } from 'react-router';
-import { useState, useEffect } from 'react';
+import { useParams } from "react-router";
+import { useState, useEffect } from "react";
 import {
   useGetCharityQuery,
   useDeleteCharityMutation,
-  useUpdateCharityMutation
-} from './charitiesSlice';
+  useUpdateCharityMutation,
+} from "./charitiesSlice";
+
+import "./CharityDetails.css";
 
 // this component will show a full page of the charity that was clicked on.
 // if it doesn't work its Yingshi's fault
@@ -17,13 +19,13 @@ export default function CharityDetails() {
   const [updateCharity] = useUpdateCharityMutation();
 
   /**Fetch updates from user input */
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [image, setImage] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [address, setAddress] = useState('');
-  const [category, setCategory] = useState('');
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [image, setImage] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [category, setCategory] = useState("");
 
   useEffect(() => {
     if (charity) {
@@ -54,7 +56,7 @@ export default function CharityDetails() {
       email,
       phone,
       address,
-      category
+      category,
     });
   };
 
@@ -67,65 +69,89 @@ export default function CharityDetails() {
     <p>Charity is Loading</p>
   ) : (
     <>
-      <main>
-        <img src={charity.image} alt={`Logo for ${charity.title}`} />
-        <h2>{charity.title}</h2>
-        <h3>{charity.description}</h3>
-        <h3>{charity.email}</h3>
-        <h3>{charity.phone}</h3>
-        <h3>{charity.address}</h3>
-        <h3>{charity.category}</h3>
-        <form onSubmit={onUpdate}>
-          <input
-            type='text'
-            placeholder='Title'
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          ></input>
-          <input
-            type='text'
-            placeholder='Description'
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          ></input>
-          <input
-            type='text'
-            placeholder='Image'
-            value={image}
-            onChange={(e) => setImage(e.target.value)}
-          ></input>
-          <input
-            type='text'
-            placeholder='Email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></input>
-          <input
-            type='text'
-            placeholder='Phone'
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          ></input>
-          <input
-            type='text'
-            placeholder='Address'
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-          ></input>
-          <select
-            name='category'
-            value={category}
-            onChange={(e) => handleCategoryChange(e)}
-          >
-            <option>Food</option>
-            <option>Clothes</option>
-            <option>Furniture</option>
-          </select>
-          <button>Update</button>
-          <button onClick={onDelete} aria-label='delete'>
-            Delete
-          </button>
-        </form>
+      <main className="allDetails">
+        <div className="charityDetails">
+          <img
+            src={charity.image}
+            alt={`Logo for ${charity.title}`}
+            className="imageDetails"
+          />
+          <h2 className="titleDetails">{charity.title}</h2>
+          <h3 className="descriptionDetails">{charity.description}</h3>
+          <h3 className="emailDetails">📧 {charity.email}</h3>
+          <h3 className="phoneDetails">📞 {charity.phone}</h3>
+          <h3 className="addressDetails">📍 {charity.address}</h3>
+          <h3 className="categoryDetails">Donation Type: {charity.category}</h3>
+        </div>
+
+        <div className="formContainer">
+          <form onSubmit={onUpdate} className="formDetails">
+            <input
+              type="text"
+              placeholder="Title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              className="inputDetails"
+            ></input>
+            <textarea
+              type="text"
+              placeholder="Description"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              className="inputDetails"
+              id="descriptionBox"
+              rows="5"
+            ></textarea>
+            <input
+              type="text"
+              placeholder="Image"
+              value={image}
+              onChange={(e) => setImage(e.target.value)}
+              className="inputDetails"
+            ></input>
+            <input
+              type="text"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="inputDetails"
+            ></input>
+            <input
+              type="text"
+              placeholder="Phone"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              className="inputDetails"
+            ></input>
+            <input
+              type="text"
+              placeholder="Address"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              className="inputDetails"
+            ></input>
+            <select
+              name="category"
+              value={category}
+              onChange={(e) => handleCategoryChange(e)}
+              className="inputDetails"
+              id="categoryBox"
+            >
+              <option>Food</option>
+              <option>Clothes</option>
+              <option>Furniture</option>
+            </select>
+
+            <button className="updateButton">Update</button>
+            <button
+              onClick={onDelete}
+              aria-label="delete"
+              className="deleteButton"
+            >
+              Delete
+            </button>
+          </form>
+        </div>
       </main>
     </>
   );
