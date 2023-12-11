@@ -4,7 +4,7 @@
   align-items: center;
   font-size: 1.2rem;
   padding: 0 30px;
-  background-color: #0C3B2E;
+  background-color: #0c3b2e;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
   width: 95%;
   height: 80px;
@@ -46,7 +46,7 @@
   padding-right: 10px;
 }
 .nav-links:hover {
-  background-color: #6D9773;
+  background-color: #6d9773;
   border-radius: 3px;
   transition: all 0.2 ease-in-out;
 }
@@ -63,7 +63,7 @@
 .nav-links-mobile {
   padding: 0.5rem 1rem;
   white-space: nowrap;
-  background-color: #FFBA00;
+  background-color: #ffba00;
   border-radius: 3px;
   text-decoration: none;
   font-size: 1rem;
