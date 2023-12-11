@@ -16,7 +16,6 @@ import Register from './components/login/Register.jsx';
 import AccountPage from './components/login/Account.jsx';
 
 import CategoryTemplate from './components/categories/CategoryTemplate.jsx';
-
 const router = createBrowserRouter([
   {
     path: '/',
