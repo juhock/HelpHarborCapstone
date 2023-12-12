@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useCreateCharityMutation } from './charitiesSlice';
-import { useParams } from 'react-router';
+import { useParams, useNavigate } from 'react-router';
+
 import '../login/Global.css';
 
 /**Form for creating a new charity */
 export default function NewCharity() {
   const { id } = useParams();
   const {data: charity, isLoading } = useCreateCharityMutation(id)
+  const navigate = useNavigate();
 
 
 
@@ -48,6 +50,8 @@ export default function NewCharity() {
       address, 
       category 
     });
+
+    navigate('/charities')
   };
 
   const handleCategoryChange = (evt) => {

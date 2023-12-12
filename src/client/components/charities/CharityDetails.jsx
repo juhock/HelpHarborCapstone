@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
 import {
   useGetCharityQuery,
   useDeleteCharityMutation,
@@ -17,6 +18,9 @@ export default function CharityDetails() {
   const { data: charity, isLoading } = useGetCharityQuery(id);
   const [deleteCharity] = useDeleteCharityMutation();
   const [updateCharity] = useUpdateCharityMutation();
+
+  //useNavigate be chilling over here
+  const navigate = useNavigate();
 
   /**Fetch updates from user input */
   const [title, setTitle] = useState("");
@@ -43,6 +47,7 @@ export default function CharityDetails() {
   const onDelete = async (evt) => {
     evt.preventDefault();
     deleteCharity(id);
+    navigate('/charities');
   };
 
   /** Update a charity */
