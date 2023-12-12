@@ -1,6 +1,5 @@
 import { React } from 'react';
 import { useParams } from 'react-router-dom'
-import '../login/Global.css';
 import { useGetCharitiesInCategoryQuery, useGetCharitiesQuery } from "../charities/charitiesSlice"
 import CharityCard from '../charities/CharityCard';
 

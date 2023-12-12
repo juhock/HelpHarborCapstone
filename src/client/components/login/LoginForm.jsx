@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { React, useState } from "react";
 import { useLoginMutation, useRegisterMutation } from "./authslice";
-import "../login/Global.css";
+import "./LoginForm.css";
 
 export default function LoginForm() {
   const navigate = useNavigate();
@@ -37,7 +37,8 @@ export default function LoginForm() {
 
   return (
     <section>
-      <div className="global">
+      <div className="LoginBackground">
+        <div className="Login">
         <h1>{authAction}</h1>
         <form onSubmit={handleSubmit}>
           <h3>Login Form</h3>
@@ -75,6 +76,7 @@ export default function LoginForm() {
         {!isLogin && registerError && (
           <p>Username or Password is Incorrect. Please try again.</p>
         )}
+      </div>
       </div>
     </section>
   );
