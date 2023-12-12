@@ -1,3 +1,4 @@
+/* Entire content container */
 .charityList {
   margin: 80px 50px 50px 40px;
   padding: 30px;
@@ -5,17 +6,51 @@
   background-color: #0a512e84;
 }
 
+/* Entire container of charity list */
+
+.bigHeaderList {
+  color: rgb(10, 46, 102);
+  -webkit-text-stroke: 1px rgba(245, 245, 245, 0.787);
+  text-shadow: 3px 3px 0 #ffffff2d;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
 .charity-info {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.charity-link {
-  text-decoration: solid underline 0.5px #388645;
-  font-size: x-small;
-  color: #105834;
-  margin: 12px;
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* 'Card' component */
+.charity-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgb(10, 46, 102);
+
+  height: 24em;
+  width: 20em;
+}
+
+.charity-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Inside the cards */
+.charity-card img {
+  width: 175px;
+  height: 175px;
+  display: inline-block;
 }
 
 .charityTitle {
@@ -30,44 +65,9 @@
   margin: 12px;
 }
 
-.bigHeaderList {
-  color: rgb(10, 46, 102);
-  -webkit-text-stroke: 1px rgba(245, 245, 245, 0.787);
-  text-shadow: 3px 3px 0 #ffffff2d;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.charity-card {
-  margin-bottom: 20px;
-  padding: 15px;
-  box-shadow: 0 2px 4px rgb(252, 250, 112);
-  transition: transform 0.3s ease-in-out;
-  overflow: hidden;
-
-  background-color: whitesmoke;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgb(10, 46, 102);
-  height: 22em;
-
-  text-align: center;
-}
-
-.charity-card:hover {
-  transform: translateY(-5px);
-}
-
-.charity-card img {
-  width: 50%;
-  height: auto;
-  display: inline-block;
+.charity-link {
+  text-decoration: solid underline 0.5px #388645;
+  font-size: x-small;
+  color: #105834;
+  margin: 12px;
 }
