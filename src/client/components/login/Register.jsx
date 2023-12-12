@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { React, useState } from 'react';
 import { useRegisterMutation } from './authslice';
-import '../login/Global.css';
+import "./Register.css";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ export default function Register() {
 
   return (
     <section>
-      <div className='global'>
+      <div className='RegisterForm'>
         <form onSubmit={handleSubmit}>
           <h3>Register Form</h3>
           <label>

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useCreateCharityMutation } from './charitiesSlice';
 import { useParams, useNavigate } from 'react-router';
 
-import '../login/Global.css';
+
 
 /**Form for creating a new charity */
 export default function NewCharity() {
