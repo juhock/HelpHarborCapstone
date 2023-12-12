@@ -73,13 +73,13 @@
 
 /* Buttons */
 .updateButton {
-  background-color: #285fa7;
+  background-color: #0c3b2e;
   color: #fff;
   cursor: pointer;
 }
 
 .deleteButton {
-  background-color: #dc3545;
+  background-color: #ebae05;
   color: #fff;
   cursor: pointer;
 }
