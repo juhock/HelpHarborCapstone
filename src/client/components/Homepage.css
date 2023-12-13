@@ -34,6 +34,11 @@
 .welcomeMsg h1 {
   font-size: 2rem;
   text-align: center;
+  color: #f1f1f1;
+}
+
+.welcomeMsg h2 {
+  color: #f1f1f1;
 }
 
 .services {
