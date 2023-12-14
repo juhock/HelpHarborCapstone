@@ -1,11 +1,8 @@
-import { useState, useEffect } from 'react';
-import { useCreateCharityMutation } from './charitiesSlice';
-import { useParams, useNavigate } from 'react-router';
-import logo2 from "../../assets/logo2.png"
-import './NewCharity.css'
-
-
-
+import { useState, useEffect } from "react";
+import { useCreateCharityMutation } from "./charitiesSlice";
+import { useParams, useNavigate } from "react-router";
+import logo2 from "../../assets/logo2.png";
+import "./NewCharity.css";
 
 /**Form for creating a new charity */
 export default function NewCharity() {
@@ -57,24 +54,28 @@ export default function NewCharity() {
   };
 
   return (
-    
-      <main className='allDetails'>
-        <div className="charityDetails">
+    <main className="allDetails">
+      <div className="charityDetails">
+        <img src={logo2} alt="default logo" className="imageDetails" />
 
-          <img
-           src={logo2}
-           alt='default logo'
-           className="imageDetails"
-           />
-
-           <h2 className="titleDetails">Here is where the title will display</h2>
-           <h3 className="descriptionDetails">Here is where the description will display</h3>
-           <h3 className="emailDetails">📧 Here is where the email will display</h3>
-           <h3 className="phoneDetails">📞 Here is where the phone number will display</h3>
-           <h3 className="addressDetails">📍 Here is where the address will display</h3>
-           <h3 className="categoryDetails">Here is where the donation category displays</h3>
-        </div>
-        <div className="formContainer">
+        <h2 className="titleDetails">Title</h2>
+        <h3 className="descriptionDetails">
+          Here is where the description will display
+        </h3>
+        <h3 className="emailDetails">
+          📧 Here is where the email will display
+        </h3>
+        <h3 className="phoneDetails">
+          📞 Here is where the phone number will display
+        </h3>
+        <h3 className="addressDetails">
+          📍 Here is where the address will display
+        </h3>
+        <h3 className="categoryDetails">
+          Here is where the donation category displays
+        </h3>
+      </div>
+      <div className="formContainer">
         <form onSubmit={onCreate} className="formDetails">
           <input
             type="text"
@@ -119,11 +120,11 @@ export default function NewCharity() {
             className="inputDetails"
           ></input>
           <select
-          name='category'
-          value={category}
-          onChange={(e) => handleCategoryChange(e)}
-          className="inputDetails"
-          id="categoryBox"
+            name="category"
+            value={category}
+            onChange={(e) => handleCategoryChange(e)}
+            className="inputDetails"
+            id="categoryBox"
           >
             <option>Please Select A Category</option>
             <option>Food</option>
@@ -132,8 +133,7 @@ export default function NewCharity() {
           </select>
           <button className="createButton">Create</button>
         </form>
-        </div>
-      </main>
-    
+      </div>
+    </main>
   );
 }
