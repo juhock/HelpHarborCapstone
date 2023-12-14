@@ -6,7 +6,7 @@ import {
   useDeleteCharityMutation,
   useUpdateCharityMutation
 } from './charitiesSlice';
-import { selectToken, useGetUserAccountQuery } from '../login/authSlice.js';
+import { selectToken, useGetUserAccountQuery } from '../login/authslice.js';
 import './CharityDetails.css';
 
 export default function CharityDetails() {
@@ -154,10 +154,10 @@ const navigate = useNavigate();
             </div>
           </form>
         ) : (
-          <p>Not your posts, no form</p>
+          <p></p>
         )}
       </main>
-      ) : (<p>Nothing</p>)
+      ) : (<p></p>)
     </>
   );
 }

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { React, useState } from 'react';
 import { useRegisterMutation } from './authslice';
-import "./Register.css";
+import './Register.css';
 
 export default function Register() {
   const navigate = useNavigate();

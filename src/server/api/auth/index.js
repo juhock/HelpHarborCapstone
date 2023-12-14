@@ -1,12 +1,12 @@
-const { ServerError } = require("../../errors");
-const prisma = require("../../prisma");
-const jwt = require("./jwt");
-const bcrypt = require("bcrypt");
-const router = require("express").Router();
+const { ServerError } = require('../../errors');
+const prisma = require('../../prisma');
+const jwt = require('./jwt');
+const bcrypt = require('bcrypt');
+const router = require('express').Router();
 module.exports = router;
 
 // Creates new account and returns token
-router.post("/register", async (req, res, next) => {
+router.post('/register', async (req, res, next) => {
   try {
     const { username, password } = req.body;
 
@@ -14,13 +14,13 @@ router.post("/register", async (req, res, next) => {
     if (!username || !password) {
       throw new ServerError(
         400,
-        "Username and password required. Please enter both."
+        'Username and password required. Please enter both.'
       );
     }
 
     // Check if account already exists
     const user = await prisma.user.findUnique({
-      where: { username },
+      where: { username }
     });
     if (user) {
       throw new ServerError(
@@ -31,7 +31,7 @@ router.post("/register", async (req, res, next) => {
 
     // Create new user
     const newUser = await prisma.user.create({
-      data: { username, password },
+      data: { username, password }
     });
 
     const token = jwt.sign({ id: newUser.id });
@@ -42,7 +42,7 @@ router.post("/register", async (req, res, next) => {
 });
 
 // Returns token for account if credentials valid
-router.post("/login", async (req, res, next) => {
+router.post('/login', async (req, res, next) => {
   try {
     const { username, password } = req.body;
 
@@ -50,14 +50,13 @@ router.post("/login", async (req, res, next) => {
     if (!username || !password) {
       throw new ServerError(
         400,
-        "Username and password are required. Please enter both."
+        'Username and password are required. Please enter both.'
       );
     }
 
-    
     //Check if account exists
     const user = await prisma.user.findUnique({
-      where: { username },
+      where: { username }
     });
     if (!user) {
       throw new ServerError(
@@ -68,9 +67,9 @@ router.post("/login", async (req, res, next) => {
 
     //Check if password is correct
     const passwordValid = await bcrypt.compare(password, user.password);
-    console.log(password, user.password)
+    console.log(password, user.password);
     if (!passwordValid) {
-      throw new ServerError(401, "Invalid password");
+      throw new ServerError(401, 'Invalid password');
     }
 
     const token = jwt.sign({ id: user.id });
