@@ -35,12 +35,14 @@
   font-weight: 900;
 }
 
-.text {
-  font-size: 13px;
-  color: #545454;
-  line-height: 30px;
-  text-align: justify;
-  margin-bottom: 40px;
+
+.text{
+    font-size:15px;
+    color: #020000;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+
 }
 
 .skills button {

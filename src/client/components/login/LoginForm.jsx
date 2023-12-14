@@ -37,20 +37,22 @@ export default function LoginForm() {
 
   return (
     <section>
-      <div className='LoginBackground'>
-        <div className='Login'>
-          <h1>{authAction}</h1>
-          <form onSubmit={handleSubmit}>
-            <h3>Login Form</h3>
-            <label>
-              Username:
-              <input
-                type='text'
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                autoComplete='username'
-              />
-            </label>
+      <div className="body">
+        <div className="Login">
+      <div className="border">
+        <h1>{authAction}</h1>
+      </div>  
+        <form onSubmit={handleSubmit}>
+           
+          <label>
+            Username:
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              autoComplete="username"
+            />
+          </label>
 
             <label>
               Password:
@@ -62,22 +64,23 @@ export default function LoginForm() {
               />
             </label>
 
-            <br />
-            <button>{authAction}</button>
-            <p>
-              No Account? <Link to='/register'>Register here</Link>
-            </p>
-            <br />
-          </form>
+          <br />
+          <button>{authAction}</button>
+          <p id="registerlink">
+            No Account? <Link to="/register">Register here</Link>
+          </p>
+          <br />
+        </form>
 
-          {isLogin && loginError && (
-            <p>Username or Password is Incorrect. Please try again.</p>
-          )}
-          {!isLogin && registerError && (
-            <p>Username or Password is Incorrect. Please try again.</p>
-          )}
+        {isLogin && loginError && (
+          <p>Username or Password is Incorrect. Please try again.</p>
+        )}
+        {!isLogin && registerError && (
+          <p>Username or Password is Incorrect. Please try again.</p>
+        )}
+        
         </div>
-      </div>
+        </div>
     </section>
   );
 }
