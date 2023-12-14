@@ -59,9 +59,7 @@ export default function NewCharity() {
         <img src={logo2} alt="default logo" className="imageDetails" />
 
         <h2 className="titleDetails">Title</h2>
-        <h3 className="descriptionDetails">
-          Here is where the description will display
-        </h3>
+        <h3 className="descriptionDetails">Description</h3>
         <h3 className="emailDetails">
           📧 Here is where the email will display
         </h3>
