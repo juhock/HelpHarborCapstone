@@ -60,18 +60,10 @@ export default function NewCharity() {
 
         <h2 className="titleDetails">Title</h2>
         <h3 className="descriptionDetails">Description</h3>
-        <h3 className="emailDetails">
-          📧 Here is where the email will display
-        </h3>
-        <h3 className="phoneDetails">
-          📞 Here is where the phone number will display
-        </h3>
-        <h3 className="addressDetails">
-          📍 Here is where the address will display
-        </h3>
-        <h3 className="categoryDetails">
-          Here is where the donation category displays
-        </h3>
+        <h3 className="emailDetails">📧 Email</h3>
+        <h3 className="phoneDetails">📞 Phone</h3>
+        <h3 className="addressDetails">📍 Address</h3>
+        <h3 className="categoryDetails">Donation Category</h3>
       </div>
       <div className="formContainer">
         <form onSubmit={onCreate} className="formDetails">
