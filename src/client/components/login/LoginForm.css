@@ -94,8 +94,8 @@ button{
       );
 
       &:hover {
+        transition: 1s;
         filter: brightness(1.03);
+        color: #00999c;
       }
 }
-
-

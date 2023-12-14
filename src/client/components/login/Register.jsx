@@ -31,9 +31,12 @@ export default function Register() {
 
   return (
     <section>
+      <div className="body">
       <div className='RegisterForm'>
-        <form onSubmit={handleSubmit}>
+      <div className="border">
           <h3>Register Form</h3>
+      </div>
+        <form onSubmit={handleSubmit}>
           <label>
             Username/Email:
             <input
@@ -53,13 +56,14 @@ export default function Register() {
           </label>
           <br />
           <button type='submit'>Register</button>
-          <p>
+          <p id="LoginLink">
             Already Registered? <Link to='/login'>Login here!</Link>
           </p>
           <br />
         </form>
         {loading && <p>Registering your Account</p>}
         {error && <p>This username is already in use. Please try again.</p>}
+      </div>
       </div>
     </section>
   );
