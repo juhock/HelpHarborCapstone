@@ -10,20 +10,17 @@ import './NewCharity.css'
 /**Form for creating a new charity */
 export default function NewCharity() {
   const { id } = useParams();
-  const {data: charity, isLoading } = useCreateCharityMutation(id)
+  const { data: charity, isLoading } = useCreateCharityMutation(id);
   const navigate = useNavigate();
 
-
-
-
   const [createCharity] = useCreateCharityMutation();
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [image, setImage] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [address, setAddress] = useState('');
-  const [category, setCategory] = useState('');
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [image, setImage] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [category, setCategory] = useState("");
 
   useEffect(() => {
     if (charity) {
@@ -37,24 +34,21 @@ export default function NewCharity() {
     }
   }, [charity]);
 
-
-
-
   /** Function to trigger  */
   const onCreate = async (e) => {
     e.preventDefault();
-   
-    createCharity({ 
-      title, 
-      description, 
-      image, 
-      email, 
-      phone, 
-      address, 
-      category 
+
+    createCharity({
+      title,
+      description,
+      image,
+      email,
+      phone,
+      address,
+      category,
     });
 
-    navigate('/charities')
+    navigate("/charities");
   };
 
   const handleCategoryChange = (evt) => {
@@ -83,43 +77,43 @@ export default function NewCharity() {
         <div className="formContainer">
         <form onSubmit={onCreate} className="formDetails">
           <input
-            type='text'
-            placeholder='Title'
+            type="text"
+            placeholder="Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             className="inputDetails"
           ></input>
           <input
-            type='text'
-            placeholder='Description'
+            type="text"
+            placeholder="Description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             className="inputDetails"
           ></input>
           <input
-            type='text'
-            placeholder='Image'
+            type="text"
+            placeholder="Image"
             value={image}
             onChange={(e) => setImage(e.target.value)}
             className="inputDetails"
           ></input>
           <input
-            type='text'
-            placeholder='Email'
+            type="text"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="inputDetails"
           ></input>
           <input
-            type='text'
-            placeholder='Phone'
+            type="text"
+            placeholder="Phone"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             className="inputDetails"
           ></input>
           <input
-            type='text'
-            placeholder='Address'
+            type="text"
+            placeholder="Address"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
             className="inputDetails"

@@ -47,7 +47,7 @@ export default function CharityDetails() {
   const onDelete = async (evt) => {
     evt.preventDefault();
     deleteCharity(id);
-    navigate('/charities');
+    navigate("/charities");
   };
 
   /** Update a charity */
