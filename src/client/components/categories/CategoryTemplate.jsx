@@ -1,26 +1,23 @@
-import { React } from "react";
-import { useParams } from "react-router-dom";
-import {
-  useGetCharitiesInCategoryQuery,
-  useGetCharitiesQuery,
-} from "../charities/charitiesSlice";
-import CharityCard from "../charities/CharityCard";
+import { React } from 'react';
+import { useParams } from 'react-router-dom';
+import { useGetCharitiesInCategoryQuery } from '../charities/charitiesSlice';
+import CharityCard from '../charities/CharityCard';
 
-import "../charities/CharityCard.css";
+import '../charities/CharityCard.css';
 
 export default function CategoryTemplate() {
   /** Use query to fetch data */
   const { category } = useParams();
-  console.log("category: ", category);
+  console.log('category: ', category);
   const { data, isLoading } = useGetCharitiesInCategoryQuery(category);
-  console.log("charities from cat query: ", data);
+  console.log('charities from cat query: ', data);
 
   return isLoading || !data ? (
     <p>LOADING LOADING LOADING LOADING</p>
   ) : (
-    <div className="entire-page">
-      <h2 className="capitalize">Charities Needing {category}</h2>
-      <div className="flex">
+    <div className='entire-page'>
+      <h2 className='capitalize'>Charities Needing {category}</h2>
+      <div className='flex'>
         {data?.map((charity) => (
           <CharityCard key={charity.id} charity={charity}></CharityCard>
         ))}
