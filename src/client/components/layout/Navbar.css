@@ -46,7 +46,7 @@
   padding-right: 10px;
 }
 .nav-links:hover {
-  background-color: #6d9773;
+  background-color:rgba(243,172,18,1);
   border-radius: 3px;
   transition: all 0.2 ease-in-out;
 }
@@ -63,7 +63,7 @@
 .nav-links-mobile {
   padding: 0.5rem 1rem;
   white-space: nowrap;
-  background-color: #ffba00;
+  background-color: rgba(241,196,15,1) ;
   border-radius: 3px;
   text-decoration: none;
   font-size: 1rem;
@@ -110,7 +110,8 @@
   }
 
   .nav-links:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background:linear-gradient(
+      58deg, rgba(243,172,18,1) 20%, rgba(241,196,15,1) 100%);
     backdrop-filter: blur(20px);
   }
 
