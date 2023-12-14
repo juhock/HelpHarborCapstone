@@ -153,10 +153,10 @@ export default function CharityDetails() {
               </div>
             </form>
           ) : (
-            <p>No log in no form</p>
+            <p>Not your posts, no form</p>
           )}
         </main>
-        ) : (<p>No form without login</p>)
+        ) : (<p>Nothing</p>)
       </>
     );
   }
