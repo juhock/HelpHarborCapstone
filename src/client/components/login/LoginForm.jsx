@@ -37,11 +37,13 @@ export default function LoginForm() {
 
   return (
     <section>
-      <div className="LoginBackground">
+      <div className="body">
         <div className="Login">
+      <div className="border">
         <h1>{authAction}</h1>
+      </div>  
         <form onSubmit={handleSubmit}>
-          <h3>Login Form</h3>
+           
           <label>
             Username:
             <input
@@ -64,7 +66,7 @@ export default function LoginForm() {
 
           <br />
           <button>{authAction}</button>
-          <p>
+          <p id="registerlink">
             No Account? <Link to="/register">Register here</Link>
           </p>
           <br />
@@ -76,8 +78,9 @@ export default function LoginForm() {
         {!isLogin && registerError && (
           <p>Username or Password is Incorrect. Please try again.</p>
         )}
-      </div>
-      </div>
+        
+        </div>
+        </div>
     </section>
   );
 }

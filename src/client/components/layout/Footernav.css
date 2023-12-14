@@ -33,7 +33,8 @@ ul li {
 }
 /* this tagets both footer and navbar*/
 li a:not(.active):hover {
-  background-color: #6d9773;
+  background-color: linear-gradient(
+     rgba(243,172,18,1));
 }
 
 @media (max-width: 850px) {
