@@ -1,4 +1,4 @@
-import { useParams } from 'react-router';
+import { useParams, useNavigate} from 'react-router';
 import { useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
 import {
@@ -18,9 +18,8 @@ export default function CharityDetails() {
   const [deleteCharity] = useDeleteCharityMutation();
   const [updateCharity] = useUpdateCharityMutation();
 
-  console.log('charitydetails token: ', { token });
-  console.log('charitydetails me account: ', { me });
-  console.log('charity data itself: ', { charity });
+//useNavigate be chillin here
+const navigate = useNavigate();
 
   /**Fetch updates from user input */
   const [title, setTitle] = useState('');
@@ -47,6 +46,8 @@ export default function CharityDetails() {
   const onDelete = async (evt) => {
     evt.preventDefault();
     deleteCharity(id);
+
+    navigate('/charities')
   };
 
   /** Update a charity */
