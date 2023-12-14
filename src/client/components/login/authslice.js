@@ -52,7 +52,7 @@ const authSlice = createSlice({
     logout: (state) => {
       state.token = null;
       sessionStorage.removeItem(TOKEN_KEY);
-      localStorage.removeItem(TOKEN_KEY)
+      localStorage.removeItem(TOKEN_KEY);
     }
   },
   extraReducers: (builder) => {
