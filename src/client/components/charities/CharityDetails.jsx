@@ -30,17 +30,17 @@ const navigate = useNavigate();
   const [address, setAddress] = useState('');
   const [category, setCategory] = useState('');
 
-  useEffect(() => {
-    if (charity) {
-      setTitle(charity.title);
-      setDescription(charity.description);
-      setImage(charity.image);
-      setEmail(charity.email);
-      setPhone(charity.phone);
-      setAddress(charity.address);
-      setCategory(charity.category);
-    }
-  }, [charity]);
+    useEffect(() => {
+      if (charity) {
+        setTitle(charity.title);
+        setDescription(charity.description);
+        setImage(charity.image);
+        setEmail(charity.email);
+        setPhone(charity.phone);
+        setAddress(charity.address);
+        setCategory(charity.category);
+      }
+    }, [charity]);
 
   /** Delete a charity */
   const onDelete = async (evt) => {
@@ -64,10 +64,10 @@ const navigate = useNavigate();
     });
   };
 
-  const handleCategoryChange = (evt) => {
-    evt.preventDefault();
-    setCategory(evt.target.value);
-  };
+    const handleCategoryChange = (evt) => {
+      evt.preventDefault();
+      setCategory(evt.target.value);
+    };
 
   return charityLoading || !charity ? (
     <p>Charity is Loading</p>
