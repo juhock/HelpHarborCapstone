@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 /**
  * Empty central API slice.
@@ -7,17 +7,17 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
  */
 
 const api = createApi({
-    baseQuery: fetchBaseQuery({
-        baseUrl: "/api",
-        prepareHeaders: (headers, { getState }) => {
-            const token = getState().auth.token;
-            if (token) {
-              headers.set("authorization", `Bearer ${token}`);
-            }
-            return headers;
-        },
-    }),
-    endpoints: () => ({}),
+  baseQuery: fetchBaseQuery({
+    baseUrl: '/api',
+    prepareHeaders: (headers, { getState }) => {
+      const token = getState().auth.token;
+      if (token) {
+        headers.set('authorization', `Bearer ${token}`);
+      }
+      return headers;
+    }
+  }),
+  endpoints: () => ({})
 });
 
 export default api;

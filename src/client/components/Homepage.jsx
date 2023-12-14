@@ -10,11 +10,10 @@ export default function HomePage() {
   return (
     <>
       <div className='background'>
-        <section className="MessageAndIcons">
+        <section className='MessageAndIcons'>
           <div className='welcomeMsg'>
-            <h1 className="msg">Welcome to Help Harbor!</h1>
+            <h1 className='msg'>Welcome to Help Harbor!</h1>
             <h2>Click the following icons to access our partners in need!</h2>
-          
           </div>
           <div className='services'>
             <div className='clothesAndFood'>
