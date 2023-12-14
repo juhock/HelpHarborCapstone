@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useCreateCharityMutation } from './charitiesSlice';
 import { useParams, useNavigate } from 'react-router';
+import logo2 from "../../assets/logo2.png"
+import './NewCharity.css'
+
 
 
 
@@ -60,59 +63,83 @@ export default function NewCharity() {
   };
 
   return (
-    <section>
-      <div className='global'>
-        <p>The Form to create new post</p>
-        <form onSubmit={onCreate}>
+    
+      <main className='allDetails'>
+        <div className="charityDetails">
+
+          <img
+           src={logo2}
+           alt='default logo'
+           className="imageDetails"
+           />
+
+           <h2 className="titleDetails">Here is where the title will display</h2>
+           <h3 className="descriptionDetails">Here is where the description will display</h3>
+           <h3 className="emailDetails">📧 Here is where the email will display</h3>
+           <h3 className="phoneDetails">📞 Here is where the phone number will display</h3>
+           <h3 className="addressDetails">📍 Here is where the address will display</h3>
+           <h3 className="categoryDetails">Here is where the donation category displays</h3>
+        </div>
+        <div className="formContainer">
+        <form onSubmit={onCreate} className="formDetails">
           <input
             type='text'
             placeholder='Title'
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            className="inputDetails"
           ></input>
           <input
             type='text'
             placeholder='Description'
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+            className="inputDetails"
           ></input>
           <input
             type='text'
             placeholder='Image'
             value={image}
             onChange={(e) => setImage(e.target.value)}
+            className="inputDetails"
           ></input>
           <input
             type='text'
             placeholder='Email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="inputDetails"
           ></input>
           <input
             type='text'
             placeholder='Phone'
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
+            className="inputDetails"
           ></input>
           <input
             type='text'
             placeholder='Address'
             value={address}
             onChange={(e) => setAddress(e.target.value)}
+            className="inputDetails"
           ></input>
           <select
           name='category'
           value={category}
           onChange={(e) => handleCategoryChange(e)}
+          className="inputDetails"
+          id="categoryBox"
           >
             <option>Please Select A Category</option>
             <option>Food</option>
             <option>Clothes</option>
             <option>Furniture</option>
           </select>
-          <button>New Post</button>
+          <button className="createButton">Create</button>
         </form>
-      </div>
-    </section>
+        </div>
+      </main>
+    
   );
 }
