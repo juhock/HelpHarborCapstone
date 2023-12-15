@@ -66,11 +66,12 @@ export default function LoginForm() {
             </label>
 
             <button id="logButton">{authAction}</button>
-            <p id="registerlink">
-              No Account? <Link to="/register">Register here</Link>
-            </p>
-            <br />
           </form>
+
+          <p id="registerlink">
+            No Account? <Link to="/register">Register here</Link>
+          </p>
+          <br />
 
           {isLogin && loginError && (
             <p>Username or Password is Incorrect. Please try again.</p>

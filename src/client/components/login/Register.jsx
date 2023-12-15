@@ -61,11 +61,12 @@ export default function Register() {
             <button type="submit" id="regButton">
               Register
             </button>
-            <p id="loginLink">
-              Already Registered? <Link to="/login">Login here!</Link>
-            </p>
-            <br />
           </form>
+
+          <p id="loginLink">
+            Already Registered? <Link to="/login">Login here!</Link>
+          </p>
+          <br />
           {loading && <p>Registering your Account</p>}
           {error && <p>This username is already in use. Please try again.</p>}
         </div>
