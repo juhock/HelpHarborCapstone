@@ -99,13 +99,13 @@ export default function CharityDetails() {
               onChange={(e) => setTitle(e.target.value)}
               className="inputDetails"
             ></input>
-            <input
+            <textarea
               type="text"
               placeholder="Description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               className="inputDetails"
-            ></input>
+            ></textarea>
             <input
               type="text"
               placeholder="Image"
