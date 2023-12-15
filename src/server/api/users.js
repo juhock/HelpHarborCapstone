@@ -7,8 +7,7 @@ module.exports = router;
 
 // this will be /api/users
 router.get('/me', async (req, res, next) => {
-  const userId = res.locals.user.id;
-  if (!userId) {
+  if (!res.locals.user) {
     return next({
       status: 404,
       message: `No user found.`
@@ -17,16 +16,11 @@ router.get('/me', async (req, res, next) => {
   // if res.json(user) is used, it will include password
 
   // this res.json will not include password
+  const user = res.locals.user;
 
-  const user = await prisma.user.findUnique({
-    where: {
-        id: userId
-    },
-
-    include: {
-        posts: true,
-    }
-  })
-
-  res.json(user);
+  res.json({
+    id: user.id,
+    username: user.username,
+    posts: user.posts
+  });
 });
