@@ -32,7 +32,7 @@ export default function Register() {
   return (
     <section>
       <div className="regBody">
-        <div className="RegisterForm">
+        <div className="register">
           <div className="regBorder">
             <h1>Register</h1>
           </div>

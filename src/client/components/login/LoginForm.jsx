@@ -38,7 +38,7 @@ export default function LoginForm() {
   return (
     <section>
       <div className="logBody">
-        <div className="Login">
+        <div className="login">
           <div className="logBorder">
             <h1>{authAction}</h1>
           </div>

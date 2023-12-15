@@ -9,7 +9,7 @@
 }
 
 /* entire login container */
-.Login {
+.login {
   width: 400px;
   background: #fff;
   border-radius: 19px;
@@ -60,6 +60,8 @@
 }
 
 #logButton {
+  margin-top: -10px;
+  margin-bottom: 40px;
   width: 100%;
   max-width: 250px;
   padding: 10px;
