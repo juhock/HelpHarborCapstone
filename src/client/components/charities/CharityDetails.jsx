@@ -58,6 +58,7 @@ const navigate = useNavigate();
       title,
       description,
       email,
+      image,
       phone,
       address,
       category
@@ -138,9 +139,9 @@ const navigate = useNavigate();
               className='inputDetails'
               id='categoryBox'
             >
-              <option>Food</option>
-              <option>Clothes</option>
-              <option>Furniture</option>
+              <option>food</option>
+              <option>clothes</option>
+              <option>furniture</option>
             </select>
             <div>
               <button className='updateButton'>Update</button>
