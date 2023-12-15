@@ -37,13 +37,13 @@ export default function LoginForm() {
 
   return (
     <section>
-      <div className="body">
+      <div className="logBody">
         <div className="Login">
-          <div className="border">
+          <div className="logBorder">
             <h1>{authAction}</h1>
           </div>
           <form onSubmit={handleSubmit} id="loginForm">
-            <label className="labels">
+            <label className="logLabels">
               Username:
               <input
                 type="text"
@@ -54,7 +54,7 @@ export default function LoginForm() {
               />
             </label>
 
-            <label className="labels">
+            <label className="logLabels">
               Password:
               <input
                 type="password"
@@ -65,8 +65,7 @@ export default function LoginForm() {
               />
             </label>
 
-            <br />
-            <button id="logRegButton">{authAction}</button>
+            <button id="logButton">{authAction}</button>
             <p id="registerlink">
               No Account? <Link to="/register">Register here</Link>
             </p>

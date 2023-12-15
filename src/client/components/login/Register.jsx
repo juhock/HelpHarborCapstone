@@ -31,36 +31,37 @@ export default function Register() {
 
   return (
     <section>
-      <div className="body">
+      <div className="regBody">
         <div className="RegisterForm">
-          <div className="border">
-            <h3>Register</h3>
+          <div className="regBorder">
+            <h1>Register</h1>
           </div>
           <form onSubmit={handleSubmit} id="regForm">
-            <label className="labels">
-              Username:
-              <input
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                className="regInput"
-              />
-            </label>
+            <div className="testy">
+              <label className="regLabels">
+                Username:
+                <input
+                  type="text"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  className="regInput"
+                />
+              </label>
 
-            <label className="labels">
-              Password:
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="regInput"
-              />
-            </label>
-            <br />
-            <button type="submit" id="logRegButton">
+              <label className="regLabels">
+                Password:
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="regInput"
+                />
+              </label>
+            </div>
+            <button type="submit" id="regButton">
               Register
             </button>
-            <p id="LoginLink">
+            <p id="loginLink">
               Already Registered? <Link to="/login">Login here!</Link>
             </p>
             <br />
