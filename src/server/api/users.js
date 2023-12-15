@@ -1,6 +1,8 @@
 const { ServerError } = require('../errors');
 const express = require('express');
 const router = express.Router();
+const prisma = require('../prisma');
+
 module.exports = router;
 
 // this will be /api/users

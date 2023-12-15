@@ -3,71 +3,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
+  height: 100%;
+
   background-color: #f8f9fa;
-  margin: 2rem;
-  padding: 2rem;
-  margin-top: 4rem;
+  flex-direction: column;
 }
 
 /* Charity details container */
 .charityDetails {
-  margin-right: 25px;
   max-width: 30rem;
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  justify-content: space-evenly;
+}
+
+.textDetails {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
 }
 
 .imageDetails {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-  margin-top: -50px;
-}
-
-.titleDetails {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.descriptionDetails,
-.emailDetails,
-.phoneDetails,
-.addressDetails,
-.categoryDetails {
-  margin-bottom: 5px;
-  font-size: 1.3rem;
-  color: #285fa7;
-}
-
-.emailDetails,
-.phoneDetails,
-.addressDetails {
-  color: black;
-  font-size: 1rem;
-}
-
-.categoryDetails {
-  font-size: 0.8rem;
-  margin-top: 1rem;
-}
-
-.descriptionDetails {
-  margin-bottom: 1rem;
-}
-
-/* Form container */
-.formContainer {
-  margin-top: 20px;
-}
-
-.formDetails {
-  margin-left: 5%;
-}
-
-.inputDetails {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  font-size: 1em;
+  max-width: 200px;
+  max-height: auto;
 }
 
 /* Buttons */
