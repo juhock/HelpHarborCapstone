@@ -17,9 +17,9 @@
 }
 
 .imageDetails {
-  max-width: 100%;
+  max-width: 300px;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   margin-top: -50px;
 }
 

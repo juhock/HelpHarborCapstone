@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import { useCreateCharityMutation } from './charitiesSlice';
-import { useParams, useNavigate } from 'react-router';
-import logo2 from '../../assets/logo2.png';
-import './NewCharity.css';
+import { useState, useEffect } from "react";
+import { useCreateCharityMutation } from "./charitiesSlice";
+import { useParams, useNavigate } from "react-router";
+import logo2 from "../../assets/logo2.png";
+import "./NewCharity.css";
 
 /**Form for creating a new charity */
 export default function NewCharity() {
@@ -11,13 +11,13 @@ export default function NewCharity() {
   const navigate = useNavigate();
 
   const [createCharity] = useCreateCharityMutation();
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [image, setImage] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [address, setAddress] = useState('');
-  const [category, setCategory] = useState('');
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [image, setImage] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [category, setCategory] = useState("");
 
   useEffect(() => {
     if (charity) {
@@ -42,10 +42,10 @@ export default function NewCharity() {
       email,
       phone,
       address,
-      category
+      category,
     });
 
-    navigate('/charities');
+    navigate("/charities");
   };
 
   const handleCategoryChange = (evt) => {
@@ -54,74 +54,75 @@ export default function NewCharity() {
   };
 
   return (
-    <main className='allDetails'>
-      <div className='charityDetails'>
-        <img src={logo2} alt='default logo' className='imageDetails' />
-
-        <h2 className='titleDetails'>Title</h2>
-        <h3 className='descriptionDetails'>Description</h3>
-        <h3 className='emailDetails'>📧 Email</h3>
-        <h3 className='phoneDetails'>📞 Phone</h3>
-        <h3 className='addressDetails'>📍 Address</h3>
-        <h3 className='categoryDetails'>Donation Category</h3>
+    <main className="allDetails">
+      <div className="charityDetails">
+        <img src={logo2} alt="default logo" className="imageDetails" />
+        <div className="textDetails">
+          <h2 className="titleDetails">Title</h2>
+          <h3 className="descriptionDetails">Description</h3>
+          <h3 className="emailDetails">📧 Email</h3>
+          <h3 className="phoneDetails">📞 Phone</h3>
+          <h3 className="addressDetails">📍 Address</h3>
+          <h3 className="categoryDetails">Donation Category</h3>
+        </div>
       </div>
-      <div className='formContainer'>
-        <form onSubmit={onCreate} className='formDetails'>
+      <div className="formContainer">
+        <form onSubmit={onCreate} className="formDetails">
           <input
-            type='text'
-            placeholder='Title'
+            type="text"
+            placeholder="Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className='inputDetails'
+            className="inputDetails"
           ></input>
           <input
-            type='text'
-            placeholder='Description'
+            type="text"
+            placeholder="Description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            className='inputDetails'
+            className="inputDetails"
           ></input>
           <input
-            type='text'
-            placeholder='Image'
+            type="text"
+            placeholder="Image"
             value={image}
             onChange={(e) => setImage(e.target.value)}
-            className='inputDetails'
+            className="inputDetails"
           ></input>
           <input
-            type='text'
-            placeholder='Email'
+            type="text"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className='inputDetails'
+            className="inputDetails"
           ></input>
           <input
-            type='text'
-            placeholder='Phone'
+            type="text"
+            placeholder="Phone"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            className='inputDetails'
+            className="inputDetails"
           ></input>
           <input
-            type='text'
-            placeholder='Address'
+            type="text"
+            placeholder="Address"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
-            className='inputDetails'
+            className="inputDetails"
           ></input>
           <select
-            name='category'
+            name="category"
             value={category}
             onChange={(e) => handleCategoryChange(e)}
-            className='inputDetails'
-            id='categoryBox'
+            className="inputDetails"
+            id="categoryBox"
           >
             <option>Please Select A Category</option>
             <option>food</option>
             <option>clothes</option>
             <option>furniture</option>
           </select>
-          <button className='createButton'>Create</button>
+          <button className="createButton">Create</button>
         </form>
       </div>
     </main>
