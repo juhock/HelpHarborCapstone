@@ -1,12 +1,14 @@
 const { ServerError } = require('../errors');
 const express = require('express');
 const router = express.Router();
+const prisma = require('../prisma');
+
 module.exports = router;
 
 // this will be /api/users
 router.get('/me', async (req, res, next) => {
-  const user = res.locals.user;
-  if (!user) {
+  const userId = res.locals.user.id;
+  if (!userId) {
     return next({
       status: 404,
       message: `No user found.`
@@ -15,8 +17,16 @@ router.get('/me', async (req, res, next) => {
   // if res.json(user) is used, it will include password
 
   // this res.json will not include password
-  res.json({
-    id: user.id,
-    username: user.username
-  });
+
+  const user = await prisma.user.findUnique({
+    where: {
+        id: userId
+    },
+
+    include: {
+        posts: true,
+    }
+  })
+
+  res.json(user);
 });
