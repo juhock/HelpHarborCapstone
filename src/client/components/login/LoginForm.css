@@ -84,3 +84,11 @@
     color: #00999c;
   }
 }
+
+.logRegLinks:link {
+  color: rgba(243, 172, 18, 1);
+}
+
+.logRegLinks:visited {
+  color: rgba(243, 172, 18, 1);
+}
