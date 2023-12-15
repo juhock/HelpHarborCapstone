@@ -117,9 +117,9 @@ export default function NewCharity() {
             id='categoryBox'
           >
             <option>Please Select A Category</option>
-            <option>Food</option>
-            <option>Clothes</option>
-            <option>Furniture</option>
+            <option>food</option>
+            <option>clothes</option>
+            <option>furniture</option>
           </select>
           <button className='createButton'>Create</button>
         </form>
