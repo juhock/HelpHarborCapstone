@@ -69,7 +69,10 @@ export default function LoginForm() {
           </form>
 
           <p id="registerlink">
-            No Account? <Link to="/register">Register here</Link>
+            No Account?{" "}
+            <Link to="/register" className="logRegLinks">
+              Register here
+            </Link>
           </p>
           <br />
 

@@ -64,7 +64,10 @@ export default function Register() {
           </form>
 
           <p id="loginLink">
-            Already Registered? <Link to="/login">Login here!</Link>
+            Already Registered?{" "}
+            <Link to="/login" className="logRegLinks">
+              Login here!
+            </Link>
           </p>
           <br />
           {loading && <p>Registering your Account</p>}
