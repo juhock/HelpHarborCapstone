@@ -66,7 +66,7 @@ export default function LoginForm() {
             </label>
 
             <br />
-            <button id="regButLogin">{authAction}</button>
+            <button id="logRegButton">{authAction}</button>
             <p id="registerlink">
               No Account? <Link to="/register">Register here</Link>
             </p>
