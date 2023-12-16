@@ -1,9 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* entire page container */
 .bdy {
   min-height: 100vh;
   display: flex;
@@ -13,7 +8,7 @@
 }
 
 .about {
-  background: url('../../assets/photo-1582803824594-65b5b4632cad.avif')
+  background: url("../../assets/photo-1582803824594-65b5b4632cad.avif")
     no-repeat;
   background-size: 55%;
   background-color: #f1f1f1;
@@ -21,6 +16,7 @@
   padding: 100px 0;
 }
 
+/* yellow sections */
 .inner-section {
   width: 55%;
   float: right;
@@ -29,23 +25,35 @@
   box-shadow: 12px 12px 8px rgb(0, 0, 0, 0.3);
 }
 
-.inner-section h1 {
-  margin-bottom: 30px;
+/* headers */
+.headerAbout {
+  margin-bottom: 15px;
   font-size: 30px;
   font-weight: 900;
 }
 
-
-.text{
-    font-size:15px;
-    color: #020000;
-    line-height: 30px;
-    text-align: justify;
-    margin-bottom: 40px;
-
+#ourTeam {
+  margin-top: 80px;
 }
 
-.skills button {
+.text {
+  font-size: 15px;
+  color: black;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+/* button container */
+.skills {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+/* button */
+.skills > button {
   font-size: 22px;
   text-align: center;
   letter-spacing: 2px;
@@ -57,10 +65,11 @@
   color: white;
   cursor: pointer;
 }
-.skills button:hover {
+
+.skills > button:hover {
   transition: 1s;
   background-color: #ecf5f5;
-  color: #00999c;
+  color: rgb(14, 109, 14);
 }
 
 @media screen and (max-width: 1200px) {
@@ -85,7 +94,7 @@
   .inner-section {
     padding: 60px;
   }
-  .skills button {
+  .skills > button {
     font-size: 19px;
     padding: 5px;
     width: 160px;
