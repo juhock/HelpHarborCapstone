@@ -1,5 +1,5 @@
 /* Entire container */
-.allDetails {
+.newAllDetails {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,59 +11,59 @@
 }
 
 /* Charity details container */
-.charityDetails {
+.newCharityDetails {
   margin-right: 25px;
   max-width: 30rem;
 }
 
-.imageDetails {
+.newImageDetails {
   max-width: 300px;
   height: auto;
   margin-bottom: 50px;
   margin-top: -50px;
 }
 
-.titleDetails {
+.newTitleDetails {
   font-size: 2rem;
   margin-bottom: 15px;
 }
 
-.descriptionDetails,
-.emailDetails,
-.phoneDetails,
-.addressDetails,
-.categoryDetails {
+.newDescriptionDetails,
+.newEmailDetails,
+.newPhoneDetails,
+.newAddressDetails,
+.newCategoryDetails {
   margin-bottom: 5px;
   font-size: 1.3rem;
   color: #285fa7;
 }
 
-.emailDetails,
-.phoneDetails,
-.addressDetails {
+.newEmailDetails,
+.newPhoneDetails,
+.newAddressDetails {
   color: black;
   font-size: 1rem;
 }
 
-.categoryDetails {
+.newCategoryDetails {
   font-size: 0.8rem;
   margin-top: 1rem;
 }
 
-.descriptionDetails {
+.newDescriptionDetails {
   margin-bottom: 1rem;
 }
 
 /* Form container */
-.formContainer {
+.newFormContainer {
   margin-top: 20px;
 }
 
-.formDetails {
+.newFormDetails {
   margin-left: 5%;
 }
 
-.inputDetails {
+.newInputDetails {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;

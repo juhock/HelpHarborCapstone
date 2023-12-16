@@ -29,6 +29,22 @@
   max-height: auto;
 }
 
+/* Form container */
+.formContainer {
+  margin-top: 20px;
+}
+
+.formDetails {
+  margin-left: 5%;
+}
+
+.inputDetails {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
 /* Buttons */
 .updateButton {
   background-color: #0c3b2e;
