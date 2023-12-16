@@ -57,7 +57,7 @@ export default function NewCharity() {
     <main className="newAllDetails">
       <div className="newCharityDetails">
         <img src={logo2} alt="default logo" className="newImageDetails" />
-        <div>
+        <div id="newTextInfo">
           <h2 className="newTitleDetails">Title</h2>
           <h3 className="newDescriptionDetails">Description</h3>
           <h3 className="newEmailDetails">📧 Email</h3>
@@ -75,13 +75,13 @@ export default function NewCharity() {
             onChange={(e) => setTitle(e.target.value)}
             className="newInputDetails"
           ></input>
-          <input
+          <textarea
             type="text"
             placeholder="Description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             className="newInputDetails"
-          ></input>
+          ></textarea>
           <input
             type="text"
             placeholder="Image"
@@ -122,7 +122,9 @@ export default function NewCharity() {
             <option>clothes</option>
             <option>furniture</option>
           </select>
-          <button className="createButton">Create</button>
+          <div id="createButContainer">
+            <button className="createButton">Create</button>
+          </div>
         </form>
       </div>
     </main>
