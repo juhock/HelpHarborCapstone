@@ -1,10 +1,10 @@
-.account {
+.accountBackground {
+  height: 100vh;
   border: 10px;
-  max-width: 800px;
-  height: 60vh;
+  max-width: 1800px;
   margin: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   position: absolute;
   right: 0;
@@ -13,18 +13,63 @@
   bottom: 0;
   padding: 25px;
   border-radius: 13px;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
 }
 
-.accountBackground {
-  height: 100vh;
+.accountInfo {
+  margin-top: -250px;
+  display: flex;
+  flex-direction: column;
 }
 
-#listAll {
+.textAccount {
+  margin-bottom: 20px;
+}
+
+.textAccount > h2 {
+  margin-bottom: 20px;
+}
+
+.logout {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 240ms ease-in-out;
+  background: linear-gradient(
+    58deg,
+    rgba(243, 172, 18, 1) 20%,
+    rgba(241, 196, 15, 1) 100%
+  );
+
+  &:hover {
+    transition: 1s;
+    filter: brightness(1.03);
+    color: #00999c;
+  }
+}
+
+#postsContainer {
   list-style: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 80px;
+}
+
+#allMyPosts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#postsContainer > h2 {
+  margin-bottom: 20px;
 }
