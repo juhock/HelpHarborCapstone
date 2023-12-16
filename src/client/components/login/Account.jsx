@@ -27,7 +27,7 @@ export default function AccountPage() {
     <p>Your Account is Loading</p>
   ) : (
     <section>
-      <div className="accountBackground">
+      <div className="contentContainer">
         <div className="accountInfo">
           <div className="textAccount">
             <h2>Account Information:</h2>
