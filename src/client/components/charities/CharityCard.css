@@ -1,10 +1,12 @@
 /* Entire container of content */
 .entire-page {
   /* border: solid 2px rgb(239, 7, 7); */
-
   margin: 100px 30px 10px 30px;
   padding: 30px;
   text-align: center;
+  background-color: #f1f1f1;
+  height: 100vh;
+  border-radius: 5px;
 }
 
 .capitalize {
@@ -29,8 +31,6 @@ h2,
 
 /* background of each card */
 .player-cards {
-  border: solid 2px rgba(0, 0, 0, 0.418);
-
   text-align: center;
 
   display: flex;
@@ -39,13 +39,9 @@ h2,
 
   text-align: center;
 
-  height: 13.3rem;
-  width: 11.5rem;
+  /* height: 13.3rem;
+  width: 11.5rem; */
 
-  transition: transform 0.3s ease-in-out;
-
-  background-color: rgb(0, 113, 0);
-  border-radius: 4px;
   box-shadow: 0 2px 4px rgb(10, 46, 102);
   margin: 20px;
 }
@@ -62,7 +58,7 @@ h2,
 
   list-style: none;
 
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   border-radius: 4px;
   box-shadow: 0 2px 4px;
 
@@ -77,14 +73,14 @@ h2,
 }
 
 .charityTitle {
-  margin: -10px 0px 10px 0px;
+  margin: -20px 0px 10px 0px;
   color: #105834;
   font-size: 0.9rem;
 }
 
 .charityDescription {
   font-size: 0.5rem;
-  color: #388645;
+  color: black;
   margin: 12px;
 }
 
