@@ -1,30 +1,72 @@
-.account {
+.accountBackground {
+  height: 100vh;
+  padding: 25px;
+}
+
+.contentContainer {
   border: 10px;
-  max-width: 800px;
-  height: 60vh;
-  margin: auto;
+  height: 100vh;
+  padding: 3rem;
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.accountInfo {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+
+.textAccount > h2 {
+  margin-bottom: 20px;
+}
+
+.logout {
+  margin-top: 40px;
+  width: 900%;
+  max-width: 200px;
+  padding: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 240ms ease-in-out;
+  background: linear-gradient(
+    58deg,
+    rgba(243, 172, 18, 1) 20%,
+    rgba(241, 196, 15, 1) 100%
+  );
+
+  &:hover {
+    transition: 1s;
+    filter: brightness(1.03);
+    color: #00999c;
+  }
+}
+
+#postsContainer {
+  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  padding: 25px;
-  border-radius: 13px;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
 }
 
-.accountBackground {
-  height: 100vh;
-}
-
-#listAll {
-  list-style: none;
+#allMyPosts {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 1500px;
+}
+
+#postsContainer > h2 {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
 }

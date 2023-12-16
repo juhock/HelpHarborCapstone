@@ -54,75 +54,77 @@ export default function NewCharity() {
   };
 
   return (
-    <main className="allDetails">
-      <div className="charityDetails">
-        <img src={logo2} alt="default logo" className="imageDetails" />
-        <div className="textDetails">
-          <h2 className="titleDetails">Title</h2>
-          <h3 className="descriptionDetails">Description</h3>
-          <h3 className="emailDetails">📧 Email</h3>
-          <h3 className="phoneDetails">📞 Phone</h3>
-          <h3 className="addressDetails">📍 Address</h3>
-          <h3 className="categoryDetails">Donation Category</h3>
+    <main className="newAllDetails">
+      <div className="newCharityDetails">
+        <img src={logo2} alt="default logo" className="newImageDetails" />
+        <div id="newTextInfo">
+          <h2 className="newTitleDetails">Title</h2>
+          <h3 className="newDescriptionDetails">Description</h3>
+          <h3 className="newEmailDetails">📧 Email</h3>
+          <h3 className="newPhoneDetails">📞 Phone</h3>
+          <h3 className="newAddressDetails">📍 Address</h3>
+          <h3 className="newCategoryDetails">Donation Category</h3>
         </div>
       </div>
-      <div className="formContainer">
-        <form onSubmit={onCreate} className="formDetails">
+      <div className="newFormContainer">
+        <form onSubmit={onCreate} className="newFormDetails">
           <input
             type="text"
             placeholder="Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="inputDetails"
+            className="newInputDetails"
           ></input>
-          <input
+          <textarea
             type="text"
             placeholder="Description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            className="inputDetails"
-          ></input>
+            className="newInputDetails"
+          ></textarea>
           <input
             type="text"
             placeholder="Image"
             value={image}
             onChange={(e) => setImage(e.target.value)}
-            className="inputDetails"
+            className="newInputDetails"
           ></input>
           <input
             type="text"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="inputDetails"
+            className="newInputDetails"
           ></input>
           <input
             type="text"
             placeholder="Phone"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            className="inputDetails"
+            className="newInputDetails"
           ></input>
           <input
             type="text"
             placeholder="Address"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
-            className="inputDetails"
+            className="newInputDetails"
           ></input>
           <select
             name="category"
             value={category}
             onChange={(e) => handleCategoryChange(e)}
-            className="inputDetails"
-            id="categoryBox"
+            className="newInputDetails"
+            id="newCategoryBox"
           >
             <option>Please Select A Category</option>
             <option>food</option>
             <option>clothes</option>
             <option>furniture</option>
           </select>
-          <button className="createButton">Create</button>
+          <div id="createButContainer">
+            <button className="createButton">Create</button>
+          </div>
         </form>
       </div>
     </main>

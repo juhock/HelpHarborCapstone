@@ -73,7 +73,7 @@ export default function CharityDetails() {
   return charityLoading || !charity ? (
     <p>Charity is Loading</p>
   ) : (
-    <>
+    <div className="tester">
       <main className="allDetails">
         <div className="charityDetails">
           <img
@@ -82,12 +82,12 @@ export default function CharityDetails() {
             className="imageDetails"
           />
           <div className="textDetails">
-            <h2 className="titleDetails">{charity.title}</h2>
-            <h3 className="descriptionDetails">{charity.description}</h3>
-            <h3 className="emailDetails">{charity.email}</h3>
-            <h3 className="phoneDetails">{charity.phone}</h3>
-            <h3 className="addressDetails">{charity.address}</h3>
-            <h3 className="categoryDetails">{charity.category}</h3>
+            <h2 id="titleDetails">{charity.title}</h2>
+            <h3 id="descriptionDetails">{charity.description}</h3>
+            <h4 id="emailDetails">{charity.email}</h4>
+            <h4 id="phoneDetails">{charity.phone}</h4>
+            <h4 id="addressDetails">{charity.address}</h4>
+            <h5 id="categoryDetails">{charity.category}</h5>
           </div>
         </div>
         {charity.userId === me?.id ? (
@@ -145,7 +145,7 @@ export default function CharityDetails() {
               <option>clothes</option>
               <option>furniture</option>
             </select>
-            <div>
+            <div id="buttonContainer">
               <button className="updateButton">Update</button>
               <button
                 onClick={onDelete}
@@ -160,6 +160,6 @@ export default function CharityDetails() {
           <p></p>
         )}
       </main>
-    </>
+    </div>
   );
 }

@@ -9,8 +9,8 @@
 
 .MessageAndIcons {
   border: 10px;
-  max-width: 800px;
-  height: 60vh;
+  max-width: 600px;
+  height: 55vh;
   margin: auto;
 
   display: flex;
@@ -25,20 +25,16 @@
 
   padding: 25px;
 
-  border-radius: 13px;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(198, 220, 198, 0.256);
   backdrop-filter: blur(4px);
 }
 
-.welcomeMsg h1 {
+.msg {
   font-size: 2rem;
   text-align: center;
-  color: #f1f1f1;
-}
-
-.welcomeMsg h2 {
-  color: #f1f1f1;
+  color: rgb(10, 82, 10);
 }
 
 .services {
@@ -47,8 +43,8 @@
 }
 
 .services img {
-  height: 8em;
-  width: 8em;
+  height: 7em;
+  width: 7em;
   margin: 10px;
   border-radius: 50%;
   transition: transform 0.3s ease-in-out;
@@ -56,4 +52,8 @@
 
 .services img:hover {
   transform: scale(1.1);
+}
+
+#clickPlease {
+  color: rgba(245, 245, 245, 0.807);
 }

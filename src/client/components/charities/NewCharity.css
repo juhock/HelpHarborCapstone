@@ -1,89 +1,106 @@
 /* Entire container */
-.allDetails {
+.newAllDetails {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   background-color: #f8f9fa;
-  margin: 2rem;
-  padding: 2rem;
-  margin-top: 4rem;
+  padding: 3rem;
+  margin-top: 3rem;
 }
 
 /* Charity details container */
-.charityDetails {
-  margin-right: 25px;
-  max-width: 30rem;
+.newCharityDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }
 
-.imageDetails {
-  max-width: 300px;
+.newImageDetails {
   height: auto;
-  margin-bottom: 50px;
+  max-width: 50%;
+  margin-bottom: 20px;
   margin-top: -50px;
 }
 
-.titleDetails {
+#newTextInfo {
+  margin-left: 20px;
+}
+
+.newTitleDetails {
   font-size: 2rem;
   margin-bottom: 15px;
 }
 
-.descriptionDetails,
-.emailDetails,
-.phoneDetails,
-.addressDetails,
-.categoryDetails {
+.newDescriptionDetails,
+.newEmailDetails,
+.newPhoneDetails,
+.newAddressDetails,
+.newCategoryDetails {
   margin-bottom: 5px;
   font-size: 1.3rem;
-  color: #285fa7;
+  color: rgba(9, 75, 9);
 }
 
-.emailDetails,
-.phoneDetails,
-.addressDetails {
-  color: black;
+.newEmailDetails,
+.newPhoneDetails,
+.newAddressDetails {
+  color: rgb(9, 75, 9);
   font-size: 1rem;
 }
 
-.categoryDetails {
+.newCategoryDetails {
   font-size: 0.8rem;
   margin-top: 1rem;
 }
 
-.descriptionDetails {
+.newDescriptionDetails {
   margin-bottom: 1rem;
 }
 
 /* Form container */
-.formContainer {
-  margin-top: 20px;
+.newFormContainer {
+  margin-top: 0px;
 }
 
-.formDetails {
-  margin-left: 5%;
+.newFormDetails {
+  max-width: 600px;
 }
 
-.inputDetails {
+.newInputDetails {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   font-size: 1em;
 }
 
+#createButContainer {
+  display: flex;
+  justify-content: center;
+}
 .createButton {
+  margin-top: 40px;
+  width: 900%;
+  max-width: 200px;
+  padding: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 240ms ease-in-out;
   background: linear-gradient(
     58deg,
     rgba(243, 172, 18, 1) 20%,
     rgba(241, 196, 15, 1) 100%
   );
 
-  color: #fff;
-  cursor: pointer;
-  width: 100%;
-  padding: 1em;
-  font-size: 1em;
-  border-radius: 4px;
-  margin-bottom: 1rem;
+  &:hover {
+    transition: 1s;
+    filter: brightness(1.03);
+    color: #00999c;
+  }
 }
 
 .createButton:hover {

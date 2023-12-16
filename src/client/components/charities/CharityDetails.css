@@ -1,63 +1,115 @@
+.tester {
+  display: flex;
+  justify-content: center;
+}
+
 /* Entire container */
 .allDetails {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  height: 100%;
 
   background-color: #f8f9fa;
   flex-direction: column;
+
+  padding: 2rem;
+  width: 100%;
 }
 
 /* Charity details container */
 .charityDetails {
-  max-width: 30rem;
+  max-width: 800px;
   display: flex;
   flex-direction: row;
   margin-top: 100px;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .textDetails {
   display: flex;
   flex-direction: column;
-  margin-left: 100px;
+  margin-left: 50px;
+  color: #0c3b2e;
 }
 
 .imageDetails {
-  max-width: 200px;
-  max-height: auto;
+  height: auto;
+  max-width: 35%;
+  margin-bottom: 20px;
+}
+
+#titleDetails,
+#descriptionDetails,
+#addressDetails {
+  margin-bottom: 20px;
+}
+
+#emailDetails,
+#phoneDetails {
+  margin-bottom: 5px;
+}
+
+/* Form container */
+.formContainer {
+  margin-top: 20px;
+}
+
+.formDetails {
+  margin-left: 5%;
+  max-width: 600px;
+  margin-top: 40px;
+}
+
+.inputDetails {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1em;
 }
 
 /* Buttons */
+#buttonContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .updateButton {
   background-color: #0c3b2e;
   color: #fff;
   cursor: pointer;
 }
 
+.updateButton,
 .deleteButton {
+  margin-top: 10px;
+  width: 900%;
+  max-width: 150px;
+  padding: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 240ms ease-in-out;
   background: linear-gradient(
     58deg,
     rgba(243, 172, 18, 1) 20%,
     rgba(241, 196, 15, 1) 100%
   );
-  color: #fff;
-  cursor: pointer;
-}
 
-.updateButton,
-.deleteButton {
-  width: 100%;
-  padding: 1em;
-  font-size: 1em;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-  /* margin-left: 9rem;
-    max-width: 10rem; */
+  &:hover {
+    transition: 1s;
+    filter: brightness(1.03);
+    color: #00999c;
+  }
 }
 
 .updateButton:hover,
 .deleteButton:hover {
   opacity: 0.9;
+}
+
+.deleteButton {
+  background: linear-gradient(58deg, red 20%, rgb(241, 87, 15) 100%);
 }
