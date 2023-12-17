@@ -26,7 +26,7 @@ router.get('/:id', async (req, res, next) => {
     if (!charityById) {
       return next({
         status: 404,
-        message: `Look buddy, theres nothing here, its ok, you can move along. :)`
+        message: `Charity Not Found.`
       });
     }
     res.json(charityById);
@@ -47,7 +47,7 @@ router.get('/categories/:category', async (req, res, next) => {
     if (!charityByCategory) {
       return next({
         status: 404,
-        message: `Look buddy, theres nothing here, its ok, you can move along. :)`
+        message: `Charity Not Found.`
       });
     }
     res.json(charityByCategory);
@@ -112,8 +112,6 @@ router.post('/', async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-
-  console.log('Yingshi needs to chill:', res.locals.user);
 });
 
 //update a charity

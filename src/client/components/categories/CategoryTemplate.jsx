@@ -8,9 +8,7 @@ import '../charities/CharityCard.css';
 export default function CategoryTemplate() {
   /** Use query to fetch data */
   const { category } = useParams();
-  console.log('category: ', category);
   const { data, isLoading } = useGetCharitiesInCategoryQuery(category);
-  console.log('charities from cat query: ', data);
 
   return isLoading || !data ? (
     <p>LOADING LOADING LOADING LOADING</p>

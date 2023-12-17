@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footernav.css';
-import { Link } from 'react-router-dom';
 import { FooterMenuData } from './FooterMenuData';
 
 export default function Footerbar() {
