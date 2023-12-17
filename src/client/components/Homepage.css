@@ -93,7 +93,7 @@
   }
 }
 
-/* Media query for screens with a minimum width of 601 pixels and a maximum of 1200 pixels */
+/* Media query for screens with a minimum width of 1600 pixels */
 
 @media only screen and (min-width: 1600px) {
   .MessageAndIcons {
