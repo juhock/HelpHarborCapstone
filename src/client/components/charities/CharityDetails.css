@@ -129,9 +129,9 @@
   .charityDetails {
     max-width: 1000px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 100px;
-    justify-content: space-between;
+    align-items: center;
   }
 
   .tester {
@@ -158,10 +158,11 @@
 
 @media only screen and (min-width: 1600px) {
   .textDetails {
-    margin-left: 200px;
+    margin-left: 100px;
+    margin-top: 20px;
   }
   .charityDetails {
-    max-width: 1200px;
+    max-width: 1000px;
     display: flex;
     flex-direction: row;
     margin-top: 100px;
