@@ -72,31 +72,60 @@
   color: rgb(14, 109, 14);
 }
 
-@media screen and (max-width: 1200px) {
-  .inner-section {
-    padding: 80px;
+/* Media query for screens with a maximum width of 600 pixels */
+
+@media (max-width: 600px) {
+  .bdy {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    text-align: center;
   }
-}
-@media screen and (max-width: 1000px) {
+
   .about {
-    background-size: 100%;
-    padding: 100px 40px;
+    background: none;
+    background-size: 55%;
+    background-color: #f1f1f1;
   }
+
+  /* yellow sections */
   .inner-section {
     width: 100%;
-  }
-}
+    float: right;
+    background-color: #ebae05;
+    padding: 3rem;
+    box-shadow: 12px 12px 8px rgb(0, 0, 0, 0.3);
 
-@media screen and (max-width: 600px) {
-  .about {
-    padding: 0;
+    border: #0c3b2e solid 2px;
   }
-  .inner-section {
-    padding: 60px;
+
+  /* headers */
+  .headerAbout {
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 900;
   }
-  .skills > button {
-    font-size: 19px;
-    padding: 5px;
-    width: 160px;
+
+  #ourTeam {
+    margin-top: 40px;
+  }
+
+  .text {
+    font-size: 15px;
+    color: black;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+  }
+
+  /* button container */
+  .skills {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
   }
 }

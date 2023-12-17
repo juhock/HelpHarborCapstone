@@ -1,12 +1,12 @@
-const { ServerError } = require('../errors');
-const express = require('express');
+const { ServerError } = require("../errors");
+const express = require("express");
 const router = express.Router();
 module.exports = router;
 
-const prisma = require('../prisma');
+const prisma = require("../prisma");
 
 // this will be /api/charities
-router.get('/', async (req, res, next) => {
+router.get("/", async (req, res, next) => {
   try {
     const charitiesData = await prisma.post.findMany();
     res.json(charitiesData);
@@ -17,7 +17,7 @@ router.get('/', async (req, res, next) => {
 
 //displays charity by id!
 
-router.get('/:id', async (req, res, next) => {
+router.get("/:id", async (req, res, next) => {
   try {
     //grabs the id from the charity database
     const id = +req.params.id;
@@ -26,7 +26,7 @@ router.get('/:id', async (req, res, next) => {
     if (!charityById) {
       return next({
         status: 404,
-        message: `Charity Not Found.`
+        message: `Charity Not Found.`,
       });
     }
     res.json(charityById);
@@ -36,18 +36,18 @@ router.get('/:id', async (req, res, next) => {
 });
 
 // display charities by category!
-router.get('/categories/:category', async (req, res, next) => {
+router.get("/categories/:category", async (req, res, next) => {
   try {
     //grabs the id from the charity database
     const category = req.params.category;
 
     const charityByCategory = await prisma.post.findMany({
-      where: { category }
+      where: { category },
     });
     if (!charityByCategory) {
       return next({
         status: 404,
-        message: `Charity Not Found.`
+        message: `Charity Not Found.`,
       });
     }
     res.json(charityByCategory);
@@ -57,7 +57,7 @@ router.get('/categories/:category', async (req, res, next) => {
 });
 
 //this code should allow the adding of a charity!
-router.post('/', async (req, res, next) => {
+router.post("/", async (req, res, next) => {
   try {
     //here we grab the properties from the Post schema model
     const {
@@ -67,30 +67,30 @@ router.post('/', async (req, res, next) => {
       phone,
       address,
       description,
-      category
+      category,
       // userId
     } = req.body;
     // now for each property we give an error handler...
     if (!title) {
-      throw new ServerError(400, 'Title is required');
+      throw new ServerError(400, "Title is required");
     }
     if (!email) {
-      throw new ServerError(400, 'Email is required');
+      throw new ServerError(400, "Email is required");
     }
     if (!image) {
-      throw new ServerError(400, 'Image is required');
+      throw new ServerError(400, "Image is required");
     }
     if (!phone) {
-      throw new ServerError(400, 'Phone Number is required');
+      throw new ServerError(400, "Phone Number is required");
     }
     if (!address) {
-      throw new ServerError(400, 'Address is required');
+      throw new ServerError(400, "Address is required");
     }
     if (!description) {
-      throw new ServerError(400, 'Description is required');
+      throw new ServerError(400, "Description is required");
     }
     if (!category) {
-      throw new ServerError(400, 'Category is required');
+      throw new ServerError(400, "Category is required");
     }
     // if (!userId) {
     //   throw new ServerError(400, 'userId is required');
@@ -104,9 +104,9 @@ router.post('/', async (req, res, next) => {
         address,
         description,
         category,
-        User: { connect: { id: res.locals.user.id } }
+        User: { connect: { id: res.locals.user.id } },
         //CODE FOR AUTH STUFF NEEDS TO BE HERE LATER ON!
-      }
+      },
     });
     res.json(charity);
   } catch (err) {
@@ -116,7 +116,7 @@ router.post('/', async (req, res, next) => {
 
 //update a charity
 
-router.put('/:id', async (req, res, next) => {
+router.put("/:id", async (req, res, next) => {
   try {
     const id = +req.params.id;
     const {
@@ -127,7 +127,7 @@ router.put('/:id', async (req, res, next) => {
       address,
       description,
       category,
-      userId
+      userId,
     } = req.body;
 
     const charity = await prisma.post.findUnique({ where: { id } });
@@ -143,8 +143,8 @@ router.put('/:id', async (req, res, next) => {
         address,
         description,
         category,
-        userId
-      }
+        userId,
+      },
     });
     res.json(updatedCharity);
   } catch (err) {
@@ -154,7 +154,7 @@ router.put('/:id', async (req, res, next) => {
 
 //Deletes a charity
 
-router.delete('/:id', async (req, res, next) => {
+router.delete("/:id", async (req, res, next) => {
   try {
     const id = +req.params.id;
 

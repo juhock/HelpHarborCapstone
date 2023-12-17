@@ -7,10 +7,17 @@
   background-position: center;
 }
 
+.welcomeMsg {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .MessageAndIcons {
   border: 10px;
   max-width: 600px;
-  height: 55vh;
+  height: 500px;
   margin: auto;
 
   display: flex;
@@ -43,8 +50,8 @@
 }
 
 .services img {
-  height: 7em;
-  width: 7em;
+  height: 7rem;
+  width: 7rem;
   margin: 10px;
   border-radius: 50%;
   transition: transform 0.3s ease-in-out;
@@ -55,5 +62,76 @@
 }
 
 #clickPlease {
-  color: rgba(245, 245, 245, 0.807);
+  color: rgba(245, 245, 245, 0.851);
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Media query for screens with a maximum width of 600 pixels */
+
+@media (max-width: 600px) {
+  .services {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  #clickPlease {
+    color: rgba(245, 245, 245, 0.807);
+  }
+
+  .MessageAndIcons {
+    border: 10px;
+    max-width: 600px;
+    height: 450px;
+    margin-top: 150px;
+  }
+
+  .services img {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+/* Media query for screens with a minimum width of 1600 pixels */
+
+@media only screen and (min-width: 1600px) {
+  .MessageAndIcons {
+    border: 10px;
+    max-width: 1200px;
+    height: 700px;
+
+    margin-top: 200px;
+  }
+
+  .msg {
+    font-size: 3rem;
+    text-align: center;
+    color: rgb(10, 82, 10);
+  }
+
+  .services {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .services img {
+    height: 10rem;
+    width: 10rem;
+    margin: 1rem;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .services img:hover {
+    transform: scale(1.1);
+  }
+
+  #clickPlease {
+    color: rgba(245, 245, 245, 0.851);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+  }
 }

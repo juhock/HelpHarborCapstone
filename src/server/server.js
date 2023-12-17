@@ -1,8 +1,8 @@
-require('dotenv').config();
-const path = require('path');
-const express = require('express');
-const morgan = require('morgan');
-const { createServer: createViteServer } = require('vite');
+require("dotenv").config();
+const path = require("path");
+const express = require("express");
+const morgan = require("morgan");
+const { createServer: createViteServer } = require("vite");
 
 const PORT = process.env.PORT ?? 4000;
 
@@ -15,27 +15,27 @@ const createApp = async () => {
   const app = express();
 
   //Logging middleware, which is what morgan does
-  app.use(morgan('dev'));
+  app.use(morgan("dev"));
 
   // Body parsing middleware
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 
   // API routes
-  app.use('/api', require('./api'));
+  app.use("/api", require("./api"));
 
   // Serve static HTML in production & Vite dev server in development
-  if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.resolve(__dirname, '../../dist/')));
+  if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.resolve(__dirname, "../../dist/")));
 
     // Redirect all non-API routes to the index HTML file
-    app.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname, '../../dist/index.html'));
+    app.get("*", (req, res) => {
+      res.sendFile(path.resolve(__dirname, "../../dist/index.html"));
     });
   } else {
     // Pulled from https://vitejs.dev/config/server-options.html#server-middlewaremode
     const vite = await createViteServer({
-      server: { middlewareMode: true }
+      server: { middlewareMode: true },
     });
 
     app.use(vite.middlewares);
@@ -44,7 +44,7 @@ const createApp = async () => {
   // Simple error handling middleware
   app.use((err, req, res, next) => {
     // console.error(err);
-    res.status(err.status ?? 500).send(err.message ?? 'Internal server error.');
+    res.status(err.status ?? 500).send(err.message ?? "Internal server error.");
   });
 
   app.listen(PORT, () => {

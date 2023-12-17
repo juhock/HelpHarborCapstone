@@ -82,7 +82,7 @@
 .updateButton,
 .deleteButton {
   margin-top: 10px;
-  width: 900%;
+  width: 100%;
   max-width: 150px;
   padding: 10px;
   color: #fff;
@@ -112,4 +112,79 @@
 
 .deleteButton {
   background: linear-gradient(58deg, red 20%, rgb(241, 87, 15) 100%);
+}
+
+/* Media query for screens with a maximum width of 600 pixels */
+
+@media (max-width: 600px) {
+  .imageDetails {
+    height: 35%;
+    max-width: auto;
+    margin-bottom: 20px;
+  }
+  #buttonContainer {
+    margin-bottom: 1rem;
+  }
+
+  .charityDetails {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+  }
+
+  .tester {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Entire container */
+  .allDetails {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+
+    background-color: #f8f9fa;
+    flex-direction: column;
+
+    margin-bottom: 4rem;
+    width: 100%;
+  }
+}
+
+/* Media query for screens with a minimum width of 1600 pixels */
+
+@media only screen and (min-width: 1600px) {
+  .textDetails {
+    margin-left: 100px;
+    margin-top: 20px;
+  }
+  .charityDetails {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    justify-content: space-between;
+  }
+
+  .tester {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Entire container */
+  .allDetails {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+
+    background-color: #f8f9fa;
+    flex-direction: column;
+
+    padding: 3rem;
+    width: 100%;
+  }
 }
