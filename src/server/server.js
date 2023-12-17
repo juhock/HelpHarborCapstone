@@ -48,7 +48,7 @@ const createApp = async () => {
   });
 
   app.listen(PORT, () => {
-    console.log(`IF this doesn't work, Its Yingshi's Fault on port ${PORT}. `);
+    console.log(`Listening on port ${PORT}. `);
   });
 };
 
