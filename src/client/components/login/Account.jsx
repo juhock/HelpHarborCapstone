@@ -10,13 +10,11 @@ import CharityCard from "../charities/CharityCard";
 export default function AccountPage() {
   const { data: charities, isLoading: charitiesLoading } =
     useGetCharitiesQuery();
+
   const { data: me, isLoading } = useGetUserAccountQuery();
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
-  console.log(me);
-  console.log("charities from account page: ", charities);
 
   const logoutFunction = () => {
     dispatch(logout());
