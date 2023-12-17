@@ -118,7 +118,7 @@
 
 @media (max-width: 600px) {
   .imageDetails {
-    height: 35%;
+    max-height: 100px;
     max-width: auto;
     margin-bottom: 20px;
   }
