@@ -26,7 +26,7 @@ export default function AccountPage() {
   return isLoading || !me ? (
     <p>Your Account is Loading</p>
   ) : (
-    <section>
+    <section className="accountBackground">
       <div className="contentContainer">
         <div className="accountInfo">
           <div className="textAccount">
