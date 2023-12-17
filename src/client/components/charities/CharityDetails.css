@@ -82,7 +82,7 @@
 .updateButton,
 .deleteButton {
   margin-top: 10px;
-  width: 900%;
+  width: 100%;
   max-width: 150px;
   padding: 10px;
   color: #fff;

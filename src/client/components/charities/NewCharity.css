@@ -80,7 +80,7 @@
 }
 .createButton {
   margin-top: 40px;
-  width: 900%;
+  width: 100%;
   max-width: 200px;
   padding: 10px;
   color: #fff;
@@ -105,4 +105,85 @@
 
 .createButton:hover {
   opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  /* Entire container */
+  .newAllDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    background-color: #f8f9fa;
+    padding: 3rem;
+    margin-top: 5rem;
+  }
+
+  /* Charity details container */
+  .newCharityDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    align-items: left;
+  }
+
+  .newImageDetails {
+    width: 50%;
+    height: auto;
+
+    margin-bottom: 20px;
+    margin-top: -20px;
+  }
+
+  #newTextInfo {
+    margin-left: 40px;
+  }
+
+  /* Form container */
+  .newFormContainer {
+    margin-top: 20px;
+  }
+
+  .newFormDetails {
+    max-width: 600px;
+  }
+
+  .newInputDetails {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1em;
+  }
+
+  #createButContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .createButton {
+    margin-top: 40px;
+    margin-bottom: 3rem;
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 240ms ease-in-out;
+    background: linear-gradient(
+      58deg,
+      rgba(243, 172, 18, 1) 20%,
+      rgba(241, 196, 15, 1) 100%
+    );
+
+    &:hover {
+      transition: 1s;
+      filter: brightness(1.03);
+      color: #00999c;
+    }
+  }
 }
